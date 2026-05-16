@@ -1,6 +1,7 @@
 "use client";
 
 import type { DashboardSummary } from "@/features/shared/types/dashboard-types";
+import { DashboardCardsSkeleton } from "@/features/shared/components/dashboard-cards-skeleton";
 
 type DashboardViewProps = {
   isLoading: boolean;
@@ -18,16 +19,7 @@ export function DashboardView({
   onRetry,
 }: DashboardViewProps) {
   if (isLoading) {
-    return (
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {Array.from({ length: 6 }).map((_, index) => (
-          <div
-            key={index}
-            className="h-28 animate-pulse rounded-xl bg-zinc-200 dark:bg-zinc-800"
-          />
-        ))}
-      </div>
-    );
+    return <DashboardCardsSkeleton />;
   }
 
   if (isError) {
