@@ -5,31 +5,43 @@ type MetricCardProps = {
   metric: MetricCardData;
 };
 
-function TrendIcon({ positive }: { positive: boolean }) {
-  if (positive) {
-    return (
-      <svg viewBox="0 0 16 16" className="h-4 w-4 text-[#22c55e]" aria-hidden>
-        <path
-          d="m4 11 4-4 4 4"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          fill="none"
-        />
-      </svg>
-    );
-  }
+function TrendChartIcon({ positive }: { positive: boolean }) {
+  const color = positive ? "#22c55e" : "#ef4444";
 
   return (
-    <svg viewBox="0 0 16 16" className="h-4 w-4 text-[#ef4444]" aria-hidden>
+    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden>
       <path
-        d="m4 5 4 4 4-4"
-        stroke="currentColor"
+        d="M4 16l5-5 4 4 7-9"
+        stroke={color}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        fill="none"
+      />
+      <path
+        d="M14 6h6v6"
+        stroke={color}
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function BadgeArrowIcon({ positive }: { positive: boolean }) {
+  return (
+    <svg
+      viewBox="0 0 8 8"
+      className="metric-card__badge-icon"
+      fill="none"
+      aria-hidden
+    >
+      <path
+        d={positive ? "m2 5 2-2 2 2" : "m2 3 2 2 2-2"}
+        stroke="currentColor"
+        strokeWidth="1.25"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -37,36 +49,32 @@ function TrendIcon({ positive }: { positive: boolean }) {
 
 export function MetricCard({ metric }: MetricCardProps) {
   const positive = metric.changePercent >= 0;
-  const badgeText = `${positive ? "+" : ""}${metric.changePercent}%`;
+  const badgeText = `${Math.abs(metric.changePercent)}%`;
 
   return (
     <article className="metric-card">
-      <div className="metric-card__decoration" aria-hidden />
-
-      <div className="relative z-[1] flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#e8f3fc] text-[#026bb1]">
-        <MetricCardIconView icon={metric.icon} className="h-6 w-6" />
+      <div className="metric-card__icon">
+        <MetricCardIconView icon={metric.icon} className="metric-card__icon-svg" />
       </div>
 
-      <div className="relative z-[1] min-w-0 flex-1">
-        <div className="flex items-start justify-between gap-2">
-          <p className="text-[11px] font-semibold tracking-wide text-[#64748b] uppercase sm:text-xs">
-            {metric.label}
-          </p>
-          <TrendIcon positive={positive} />
-        </div>
-        <p className="mt-1 text-xl font-bold text-[#1e3a5f] sm:text-2xl lg:text-[28px]">
-          {metric.value}
-        </p>
-        <span
-          className={[
-            "mt-1 inline-flex rounded-md px-2 py-0.5 text-xs font-semibold",
-            positive
-              ? "bg-[#dcfce7] text-[#16a34a]"
-              : "bg-[#fee2e2] text-[#dc2626]",
-          ].join(" ")}
-        >
-          {badgeText}
-        </span>
+      <p className="metric-card__label">{metric.label}</p>
+      <p className="metric-card__value">{metric.value}</p>
+
+      <span
+        className={[
+          "metric-card__badge",
+          !positive ? "metric-card__badge--negative" : "",
+        ]
+          .filter(Boolean)
+          .join(" ")}
+      >
+        <BadgeArrowIcon positive={positive} />
+        {badgeText}
+      </span>
+
+      <div className="metric-card__decoration" aria-hidden />
+      <div className="metric-card__trend" aria-hidden>
+        <TrendChartIcon positive={positive} />
       </div>
     </article>
   );

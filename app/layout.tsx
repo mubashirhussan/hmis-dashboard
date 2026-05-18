@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Poppins, Roboto } from "next/font/google";
+import { Geist, Geist_Mono, Manrope, Poppins, Roboto } from "next/font/google";
 import { Providers } from "@/app/providers";
 import { Navbar } from "@/features/shared/components/navbar";
 import "./globals.css";
@@ -15,8 +15,13 @@ const poppins = Poppins({
 });
 const roboto = Roboto({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-roboto-family",
+});
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-manrope-family",
 });
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -36,7 +41,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${roboto.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${poppins.variable} ${roboto.variable} ${manrope.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
         <Providers>

@@ -7,27 +7,7 @@
   /* Figma artboard reference — layout is fluid above this width */
   --design-width: 1530px;
   --container-padding-x: 24px;
-  --metric-card-gap: 12px;
-  --metric-card-height: 123px;
   --metric-card-radius: 15px;
-}
-
-@media (min-width: 640px) {
-  :root {
-    --metric-card-gap: 14px;
-  }
-}
-
-@media (min-width: 1024px) {
-  :root {
-    --metric-card-gap: 16px;
-  }
-}
-
-@media (min-width: 1530px) {
-  :root {
-    --metric-card-gap: clamp(16px, 1.2vw, 24px);
-  }
 }
 
 /* Full viewport width — backgrounds, sticky bars, page shells */
@@ -67,7 +47,7 @@
 .metric-cards-row {
   display: grid;
   width: 100%;
-  gap: var(--metric-card-gap);
+  gap: 10px;
   padding-top: clamp(40px, 6vw, 32px);
   overflow-x: clip;
   overflow-y: visible;
@@ -159,37 +139,137 @@
   color: #ffffff;
 }
 
+/* Figma card 238×101 — aspect-ratio keeps layout proportional when width is fluid */
 .metric-card {
   position: relative;
-  display: flex;
+  container-type: inline-size;
+  box-sizing: border-box;
   width: 100%;
   min-width: 0;
-  height: var(--metric-card-height);
-  gap: 12px;
-  overflow: visible;
+  aspect-ratio: 238 / 101;
+  overflow: hidden;
   border-radius: var(--metric-card-radius);
   background: #ffffff;
   opacity: 1;
-  /* box-shadow: 0 0 33px 0 #0051ff40; */
-  padding: clamp(12px, 2vw, 16px) clamp(12px, 2vw, 18px);
 }
 
-/* .metric-card--highlighted {
-  box-shadow: 0 0 40px 0 #0051ff55;
-} */
+.metric-card__icon {
+  position: absolute;
+  top: 8.91%; /* 9px */
+  left: 3.36%; /* 8px */
+  z-index: 1;
+  display: flex;
+  width: 21.43%; /* 51px */
+  aspect-ratio: 1;
+  max-height: 50.5%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #f3f7ff;
+  color: #026bb1;
+  opacity: 1;
+}
 
+.metric-card__icon-svg {
+  width: 55%;
+  height: 55%;
+}
+
+.metric-card__label {
+  position: absolute;
+  top: 11.88%; /* 12px */
+  left: 28.15%; /* 67px */
+  right: 15%;
+  z-index: 1;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.04em;
+  color: #526594;
+  text-transform: uppercase;
+}
+
+.metric-card__value {
+  position: absolute;
+  top: 29.7%; /* 30px */
+  left: 28.15%; /* 67px */
+  right: 15%;
+  z-index: 1;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-manrope-family), Manrope, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+
+.metric-card__badge {
+  position: absolute;
+  top: 74.26%; /* 75px */
+  left: 3.78%; /* 9px */
+  z-index: 1;
+  display: inline-flex;
+  min-width: 32px;
+  height: 16px;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding-inline: 4px;
+  border-radius: 60px;
+  background: #22c55e2e;
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0.04em;
+  color: #16a34a;
+  opacity: 1;
+}
+
+.metric-card__badge--negative {
+  background: #ef44442e;
+  color: #dc2626;
+}
+
+.metric-card__badge-icon {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+}
+
+/* Figma: 136×136 at top 38px left 154px, border 20px #F3F7FF */
 .metric-card__decoration {
   position: absolute;
-  top: -45%;
-  right: -10%;
-  width: 39%;
+  top: 37.62%; /* 38px / 101px */
+  left: 64.71%; /* 154px / 238px */
+  width: 57.14%; /* 136px / 238px */
   aspect-ratio: 1;
-  border: clamp(14px, 7.5%, 27px) solid #f3f7ff;
-  border-radius: 1000px;
+  box-sizing: border-box;
+  border: 20px solid #f3f7ff;
+  border-radius: 50%;
   background: transparent;
   opacity: 1;
   pointer-events: none;
-  box-sizing: border-box;
+}
+
+.metric-card__trend {
+  position: absolute;
+  right: 4.2%;
+  bottom: 7.92%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
 }
 
 .dashboard-page-title {
