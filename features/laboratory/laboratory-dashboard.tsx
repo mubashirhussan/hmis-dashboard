@@ -1,32 +1,26 @@
 "use client";
 
-import { getFeatureById } from "@/features/data";
-import { DashboardShell } from "@/features/shared/components/dashboard-shell";
-import { DashboardView } from "@/features/shared/components/dashboard-view";
 import { useGetLaboratoryDashboardQuery } from "@/features/laboratory/api";
+import { FeatureDashboardPage } from "@/features/shared/components/feature-dashboard-page";
+import { getDashboardContent } from "@/features/shared/config/dashboard-content";
 
-const cfg = getFeatureById("laboratory");
+const content = getDashboardContent("laboratory");
 
 export function LaboratoryDashboard() {
-  const { data, isLoading, isError, error, refetch } =
+  const { isLoading, isError, error, refetch } =
     useGetLaboratoryDashboardQuery();
 
   return (
-    <DashboardShell
-      title={cfg?.label ?? "Laboratory"}
-      description={cfg?.description ?? "Laboratory dashboard"}
-    >
-      <DashboardView
-        isLoading={isLoading}
-        isError={isError}
-        errorMessage={
-          error && "status" in error
-            ? `Request failed (${error.status})`
-            : undefined
-        }
-        data={data}
-        onRetry={refetch}
-      />
-    </DashboardShell>
+    <FeatureDashboardPage
+      content={content}
+      isLoading={isLoading}
+      isError={isError}
+      errorMessage={
+        error && "status" in error
+          ? `Request failed (${error.status})`
+          : undefined
+      }
+      onRetry={refetch}
+    />
   );
 }

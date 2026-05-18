@@ -1,32 +1,26 @@
 "use client";
 
-import { getFeatureById } from "@/features/data";
-import { DashboardShell } from "@/features/shared/components/dashboard-shell";
-import { DashboardView } from "@/features/shared/components/dashboard-view";
 import { useGetPharmacyDashboardQuery } from "@/features/pharmacy/api";
+import { FeatureDashboardPage } from "@/features/shared/components/feature-dashboard-page";
+import { getDashboardContent } from "@/features/shared/config/dashboard-content";
 
-const cfg = getFeatureById("pharmacy");
+const content = getDashboardContent("pharmacy");
 
 export function PharmacyDashboard() {
-  const { data, isLoading, isError, error, refetch } =
+  const { isLoading, isError, error, refetch } =
     useGetPharmacyDashboardQuery();
 
   return (
-    <DashboardShell
-      title={cfg?.label ?? "Pharmacy"}
-      description={cfg?.description ?? "Pharmacy dashboard"}
-    >
-      <DashboardView
-        isLoading={isLoading}
-        isError={isError}
-        errorMessage={
-          error && "status" in error
-            ? `Request failed (${error.status})`
-            : undefined
-        }
-        data={data}
-        onRetry={refetch}
-      />
-    </DashboardShell>
+    <FeatureDashboardPage
+      content={content}
+      isLoading={isLoading}
+      isError={isError}
+      errorMessage={
+        error && "status" in error
+          ? `Request failed (${error.status})`
+          : undefined
+      }
+      onRetry={refetch}
+    />
   );
 }

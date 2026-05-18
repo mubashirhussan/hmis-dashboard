@@ -1,10 +1,11 @@
-import { FeaturePlaceholder } from "@/features/shared/components/feature-placeholder";
+import { Suspense } from "react";
+import DashboardRouteLoading from "@/features/shared/components/dashboard-route-loading";
+import { BloodBankDashboard } from "@/features/blood-bank/blood-bank-dashboard";
 
 export default function BloodBankPage() {
   return (
-    <FeaturePlaceholder
-      title="Blood Bank"
-      description="Donations, inventory, and transfusion metrics"
-    />
+    <Suspense fallback={<DashboardRouteLoading />}>
+      <BloodBankDashboard />
+    </Suspense>
   );
 }

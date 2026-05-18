@@ -1,10 +1,11 @@
-import { FeaturePlaceholder } from "@/features/shared/components/feature-placeholder";
+import { Suspense } from "react";
+import DashboardRouteLoading from "@/features/shared/components/dashboard-route-loading";
+import { ImagingDashboard } from "@/features/imaging/imaging-dashboard";
 
 export default function ImagingPage() {
   return (
-    <FeaturePlaceholder
-      title="Imaging"
-      description="Radiology and imaging workflow overview"
-    />
+    <Suspense fallback={<DashboardRouteLoading />}>
+      <ImagingDashboard />
+    </Suspense>
   );
 }

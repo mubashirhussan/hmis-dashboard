@@ -1,32 +1,25 @@
 "use client";
 
-import { getFeatureById } from "@/features/data";
-import { DashboardShell } from "@/features/shared/components/dashboard-shell";
-import { DashboardView } from "@/features/shared/components/dashboard-view";
 import { useGetPatientDashboardQuery } from "@/features/patient/api";
+import { FeatureDashboardPage } from "@/features/shared/components/feature-dashboard-page";
+import { getDashboardContent } from "@/features/shared/config/dashboard-content";
 
-const cfg = getFeatureById("patient");
+const content = getDashboardContent("patient");
 
 export function PatientDashboard() {
-  const { data, isLoading, isError, error, refetch } =
-    useGetPatientDashboardQuery();
+  const { isLoading, isError, error, refetch } = useGetPatientDashboardQuery();
 
   return (
-    <DashboardShell
-      title={cfg?.label ?? "Patient"}
-      description={cfg?.description ?? "Patient dashboard"}
-    >
-      <DashboardView
-        isLoading={isLoading}
-        isError={isError}
-        errorMessage={
-          error && "status" in error
-            ? `Request failed (${error.status})`
-            : undefined
-        }
-        data={data}
-        onRetry={refetch}
-      />
-    </DashboardShell>
+    <FeatureDashboardPage
+      content={content}
+      isLoading={isLoading}
+      isError={isError}
+      errorMessage={
+        error && "status" in error
+          ? `Request failed (${error.status})`
+          : undefined
+      }
+      onRetry={refetch}
+    />
   );
 }

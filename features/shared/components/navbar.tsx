@@ -10,6 +10,10 @@ import {
   NavCloseIcon,
   NavMenuIcon,
 } from "@/features/shared/components/nav-icons";
+import {
+  Container,
+  ContainerFluid,
+} from "@/features/shared/components/container";
 import { UserAvatar } from "@/features/shared/components/user-avatar";
 
 const NOTIFICATION_COUNT = 12;
@@ -18,6 +22,15 @@ const navLinkBase =
   "group relative flex shrink-0 items-center gap-2 px-2 py-1 transition-colors xl:px-3";
 const navLabelColor = (active: boolean) =>
   active ? "text-[#005696]" : "text-[#757575] group-hover:text-[#005696]";
+
+const navLabelClass = (active: boolean, extra = "") =>
+  [
+    "nav-label font-[family-name:var(--font-poppins-family)]",
+    active ? "nav-label--active" : "",
+    extra,
+  ]
+    .filter(Boolean)
+    .join(" ");
 
 export function Navbar() {
   const pathname = usePathname();
@@ -50,14 +63,14 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 flex w-full justify-center bg-white shadow-[0_-1px_4px_0_#00000040]">
-      <div className="app-navbar mx-auto flex w-full items-stretch gap-3 px-4 sm:gap-4 sm:px-6 lg:px-[26px]">
+    <header className="container-fluid sticky top-0 z-50 bg-white ">
+      <Container className="app-navbar flex items-stretch gap-3 sm:gap-4">
         <Link href="/" className="navbar-logo-link" aria-label="AKHF home">
           <Image
             src="/Akhf_logo.png"
             alt="Al-Khidmat Health Foundation"
-            width={118}
-            height={83}
+            width={80}
+            height={60}
             className="navbar-logo"
             priority
           />
@@ -65,7 +78,7 @@ export function Navbar() {
 
         <nav
           aria-label="Main"
-          className="hidden min-w-0 flex-1 items-stretch justify-center gap-1 lg:flex lg:gap-2 xl:gap-8"
+          className="hidden min-w-0 flex-1 items-stretch justify-center gap-1 lg:flex lg:gap-2 xl:gap-3"
         >
           {navItems.map((item) => {
             const active = isNavActive(pathname, item.href);
@@ -80,7 +93,7 @@ export function Navbar() {
                 )}
               >
                 <Icon className="h-6 w-6 shrink-0" />
-                <span className="nav-label font-[family-name:var(--font-poppins-family)] whitespace-nowrap">
+                <span className={navLabelClass(active, "whitespace-nowrap")}>
                   {item.label}
                 </span>
                 <span
@@ -118,9 +131,9 @@ export function Navbar() {
                   ].join(" ")}
                 >
                   <Icon className="h-6 w-6 shrink-0" />
-                  <span className="nav-label font-[family-name:var(--font-poppins-family)] whitespace-nowrap">
-                  {item.label}
-                </span>
+                  <span className={navLabelClass(active, "whitespace-nowrap")}>
+                    {item.label}
+                  </span>
                 </Link>
               );
             })}
@@ -213,7 +226,7 @@ export function Navbar() {
             )}
           </button>
         </div>
-      </div>
+      </Container>
 
       {mobileOpen ? (
         <>
@@ -245,7 +258,7 @@ export function Navbar() {
                       ].join(" ")}
                     >
                       <Icon className="h-6 w-6 shrink-0" />
-                      <span className="nav-label font-[family-name:var(--font-poppins-family)] text-left">
+                      <span className={navLabelClass(active, "text-left")}>
                         {item.label}
                       </span>
                     </Link>

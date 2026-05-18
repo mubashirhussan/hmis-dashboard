@@ -1,0 +1,330 @@
+import type { DashboardPageContent } from "@/features/shared/types/metric-card";
+
+const overviewMetrics: DashboardPageContent = {
+  title: "Dashboard",
+  subtitle: "Real time overview of diagnostic operations",
+  metrics: [
+    {
+      id: "patients",
+      label: "Patients Registered",
+      value: "438",
+      changePercent: 12,
+      icon: "patients",
+      highlighted: true,
+    },
+    {
+      id: "tests",
+      label: "Total Tests",
+      value: "1,247",
+      changePercent: 12,
+      icon: "tests",
+    },
+    {
+      id: "stat",
+      label: "STAT Compliance",
+      value: "92.2%",
+      changePercent: 2.1,
+      icon: "compliance",
+    },
+    {
+      id: "tat",
+      label: "TAT Compliance",
+      value: "92.2%",
+      changePercent: 2.1,
+      icon: "compliance",
+    },
+    {
+      id: "pending",
+      label: "Pending Orders",
+      value: "67",
+      changePercent: -25,
+      icon: "pending",
+    },
+    {
+      id: "visits",
+      label: "Home Visits",
+      value: "23",
+      changePercent: 22,
+      icon: "home",
+    },
+  ],
+};
+
+export const dashboardContentByModule: Record<string, DashboardPageContent> = {
+  overview: overviewMetrics,
+  laboratory: {
+    title: "Laboratory",
+    subtitle: "Real time overview of laboratory operations",
+    metrics: [
+      {
+        id: "orders",
+        label: "Total Tests",
+        value: "1,247",
+        changePercent: 12,
+        icon: "tests",
+        highlighted: true,
+      },
+      {
+        id: "stat",
+        label: "STAT Compliance",
+        value: "92.2%",
+        changePercent: 2.1,
+        icon: "compliance",
+      },
+      {
+        id: "tat",
+        label: "TAT Compliance",
+        value: "88.5%",
+        changePercent: 1.4,
+        icon: "compliance",
+      },
+      {
+        id: "pending",
+        label: "Pending Orders",
+        value: "67",
+        changePercent: -25,
+        icon: "pending",
+      },
+      {
+        id: "critical",
+        label: "Critical Results",
+        value: "9",
+        changePercent: -8,
+        icon: "pending",
+      },
+      {
+        id: "patients",
+        label: "Patients Today",
+        value: "312",
+        changePercent: 6,
+        icon: "patients",
+      },
+    ],
+  },
+  imaging: {
+    title: "Imaging",
+    subtitle: "Real time overview of imaging operations",
+    metrics: [
+      {
+        id: "scans",
+        label: "Scans Scheduled",
+        value: "186",
+        changePercent: 9,
+        icon: "imaging",
+        highlighted: true,
+      },
+      {
+        id: "completed",
+        label: "Completed Today",
+        value: "142",
+        changePercent: 11,
+        icon: "compliance",
+      },
+      {
+        id: "pending",
+        label: "Pending Reports",
+        value: "28",
+        changePercent: -12,
+        icon: "pending",
+      },
+      {
+        id: "tat",
+        label: "Report TAT",
+        value: "94.1%",
+        changePercent: 3.2,
+        icon: "compliance",
+      },
+      {
+        id: "stat",
+        label: "Urgent Cases",
+        value: "14",
+        changePercent: 5,
+        icon: "pending",
+      },
+      {
+        id: "patients",
+        label: "Patients Served",
+        value: "164",
+        changePercent: 7,
+        icon: "patients",
+      },
+    ],
+  },
+  "blood-bank": {
+    title: "Blood Bank",
+    subtitle: "Real time overview of blood bank operations",
+    metrics: [
+      {
+        id: "units",
+        label: "Units Available",
+        value: "842",
+        changePercent: 4,
+        icon: "blood",
+        highlighted: true,
+      },
+      {
+        id: "donations",
+        label: "Donations Today",
+        value: "36",
+        changePercent: 15,
+        icon: "patients",
+      },
+      {
+        id: "issued",
+        label: "Units Issued",
+        value: "58",
+        changePercent: 8,
+        icon: "tests",
+      },
+      {
+        id: "pending",
+        label: "Pending Requests",
+        value: "12",
+        changePercent: -18,
+        icon: "pending",
+      },
+      {
+        id: "expiring",
+        label: "Expiring Soon",
+        value: "7",
+        changePercent: -5,
+        icon: "pending",
+      },
+      {
+        id: "compliance",
+        label: "Safety Compliance",
+        value: "99.1%",
+        changePercent: 0.3,
+        icon: "compliance",
+      },
+    ],
+  },
+  finance: {
+    title: "Finance",
+    subtitle: "Real time overview of financial operations",
+    metrics: [
+      {
+        id: "revenue",
+        label: "Revenue Today",
+        value: "₨ 2.4M",
+        changePercent: 12,
+        icon: "finance",
+        highlighted: true,
+      },
+      {
+        id: "collections",
+        label: "Collections",
+        value: "₨ 1.9M",
+        changePercent: 9,
+        icon: "revenue",
+      },
+      {
+        id: "outstanding",
+        label: "Outstanding",
+        value: "₨ 640K",
+        changePercent: -6,
+        icon: "pending",
+      },
+      {
+        id: "invoices",
+        label: "Invoices Raised",
+        value: "318",
+        changePercent: 14,
+        icon: "compliance",
+      },
+      {
+        id: "refunds",
+        label: "Refunds",
+        value: "12",
+        changePercent: -3,
+        icon: "pending",
+      },
+      {
+        id: "margin",
+        label: "Gross Margin",
+        value: "38.2%",
+        changePercent: 1.8,
+        icon: "compliance",
+      },
+    ],
+  },
+  "home-services": {
+    title: "Home Services",
+    subtitle: "Real time overview of home care operations",
+    metrics: [
+      {
+        id: "visits",
+        label: "Home Visits",
+        value: "23",
+        changePercent: 22,
+        icon: "home",
+        highlighted: true,
+      },
+      {
+        id: "scheduled",
+        label: "Scheduled Today",
+        value: "41",
+        changePercent: 10,
+        icon: "compliance",
+      },
+      {
+        id: "completed",
+        label: "Completed",
+        value: "34",
+        changePercent: 16,
+        icon: "tests",
+      },
+      {
+        id: "pending",
+        label: "Pending Assignments",
+        value: "8",
+        changePercent: -11,
+        icon: "pending",
+      },
+      {
+        id: "patients",
+        label: "Active Patients",
+        value: "156",
+        changePercent: 5,
+        icon: "patients",
+      },
+      {
+        id: "satisfaction",
+        label: "Satisfaction",
+        value: "96.4%",
+        changePercent: 2.4,
+        icon: "compliance",
+      },
+    ],
+  },
+  patient: {
+    title: "Patient",
+    subtitle: "Real time overview of patient registration",
+    metrics: overviewMetrics.metrics,
+  },
+  opd: {
+    title: "OPD",
+    subtitle: "Real time overview of outpatient operations",
+    metrics: overviewMetrics.metrics,
+  },
+  ipd: {
+    title: "IPD",
+    subtitle: "Real time overview of inpatient operations",
+    metrics: overviewMetrics.metrics,
+  },
+  pharmacy: {
+    title: "Pharmacy",
+    subtitle: "Real time overview of pharmacy operations",
+    metrics: overviewMetrics.metrics,
+  },
+};
+
+export function getDashboardContent(moduleKey: string): DashboardPageContent {
+  return (
+    dashboardContentByModule[moduleKey] ?? {
+      title: "Dashboard",
+      subtitle: "Real time operational overview",
+      metrics: overviewMetrics.metrics,
+    }
+  );
+}
