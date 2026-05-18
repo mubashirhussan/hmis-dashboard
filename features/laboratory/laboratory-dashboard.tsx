@@ -1,6 +1,7 @@
 "use client";
 
 import { useGetLaboratoryDashboardQuery } from "@/features/laboratory/api";
+import { LaboratoryInsightsSection } from "@/features/laboratory/components/laboratory-insights-section";
 import { FeatureDashboardPage } from "@/features/shared/components/feature-dashboard-page";
 import { getDashboardContent } from "@/features/shared/config/dashboard-content";
 
@@ -21,6 +22,8 @@ export function LaboratoryDashboard() {
           : undefined
       }
       onRetry={refetch}
-    />
+    >
+      <LaboratoryInsightsSection />
+    </FeatureDashboardPage>
   );
 }

@@ -403,8 +403,11 @@
   }
 }
 
-.overview-sections {
+.overview-sections,
+.dashboard-sections,
+.laboratory-sections {
   display: flex;
+  width: 100%;
   flex-direction: column;
   gap: 10px;
 }
@@ -1043,6 +1046,328 @@
   .workload-dept-card__pending {
     font-size: 10px;
     padding: 3px 7px;
+  }
+}
+
+/* Laboratory dashboard panels */
+.lab-panel .dashboard-panel__icon {
+  background: #026bb1;
+}
+
+.laboratory-bottom-row {
+  display: grid;
+  width: 100%;
+  gap: 10px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+  .laboratory-bottom-row {
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  }
+}
+
+@container app (min-width: 1024px) {
+  .laboratory-bottom-row {
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  }
+}
+
+/* Sample pipeline */
+.sample-pipeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sample-pipeline__stages {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  gap: 0;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: thin;
+}
+
+.sample-pipeline__stage-wrap {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 0;
+  align-items: center;
+}
+
+.sample-pipeline__connector {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  color: #cbd5e1;
+}
+
+.sample-pipeline__stage {
+  --stage-color: #026bb1;
+
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  min-width: 88px;
+  min-height: 128px;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid #e8edf5;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 12px 8px 0;
+  text-align: center;
+}
+
+.sample-pipeline__stage--blue {
+  --stage-color: #026bb1;
+}
+
+.sample-pipeline__stage--purple {
+  --stage-color: #8b5cf6;
+}
+
+.sample-pipeline__stage--orange {
+  --stage-color: #f9b115;
+}
+
+.sample-pipeline__stage--green {
+  --stage-color: #26c281;
+}
+
+.sample-pipeline__stage--rose {
+  --stage-color: #f3435f;
+}
+
+.sample-pipeline__stage--slate {
+  --stage-color: #94a3b8;
+}
+
+.sample-pipeline__stage-label {
+  margin: 0;
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #64748b;
+}
+
+.sample-pipeline__stage-value {
+  margin: 8px 0 0;
+  font-family: var(--font-manrope-family), Manrope, sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+  color: #0f172a;
+}
+
+.sample-pipeline__stage-arch {
+  display: flex;
+  width: 100%;
+  height: 46px;
+  margin-top: auto;
+  align-items: center;
+  justify-content: center;
+  background: var(--stage-color);
+  color: #ffffff;
+}
+
+.sample-pipeline__progress-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sample-pipeline__progress-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sample-pipeline__progress-label {
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.sample-pipeline__progress-total {
+  font-family: var(--font-manrope-family), Manrope, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.sample-pipeline__progress-bar {
+  display: flex;
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e8edf5;
+}
+
+.sample-pipeline__progress-segment {
+  height: 100%;
+  min-width: 2px;
+}
+
+.sample-pipeline__progress-segment--blue {
+  background: #026bb1;
+}
+
+.sample-pipeline__progress-segment--purple {
+  background: #8b5cf6;
+}
+
+.sample-pipeline__progress-segment--orange {
+  background: #f9b115;
+}
+
+.sample-pipeline__progress-segment--green {
+  background: #26c281;
+}
+
+/* Laboratory tables */
+.lab-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.lab-data-table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.lab-data-table thead th {
+  padding: 10px 14px;
+  border-radius: 0;
+  background: #f4f7fb;
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  text-align: center;
+}
+
+.lab-data-table thead th:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.lab-data-table thead th:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.lab-data-table__th--left {
+  text-align: left;
+}
+
+.lab-data-table tbody td {
+  padding: 14px;
+  border-bottom: 1px solid #eef2f7;
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #64748b;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.lab-data-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.lab-data-table__td--left {
+  text-align: left;
+}
+
+.lab-data-table__td--strong {
+  font-weight: 600;
+  color: #334155;
+}
+
+.lab-status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.lab-status-badge--processing {
+  background: #fef3e2;
+  color: #d97706;
+}
+
+.lab-status-badge--completed {
+  background: #e6f7ef;
+  color: #1a9b5c;
+}
+
+.lab-tat-ring {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  font-family: var(--font-manrope-family), Manrope, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.lab-tat-ring--good {
+  color: #1a9b5c;
+  background: #f0fdf4;
+}
+
+.lab-tat-ring--warn {
+  color: #d97706;
+  background: #fffbeb;
+}
+
+.lab-tat-ring--bad {
+  color: #e11d48;
+  background: #fff1f2;
+}
+
+@container app (max-width: 900px) {
+  .lab-data-table tbody td,
+  .lab-data-table thead th {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .lab-tat-ring {
+    width: 38px;
+    height: 38px;
+    font-size: 11px;
+  }
+}
+
+@container app (max-width: 720px) {
+  .sample-pipeline__stage-wrap {
+    flex: 0 0 108px;
   }
 }
 

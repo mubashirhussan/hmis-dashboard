@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import AccountGroupOutlineIcon from "@iconify-react/mdi/account-group-outline";
-import { DashboardPanel } from "@/features/overview/components/dashboard-panel";
+import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
 import {
   patientDistributionSegments,
   patientDistributionTotal,

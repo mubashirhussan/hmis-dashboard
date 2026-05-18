@@ -1,8 +1,8 @@
 "use client";
 
 import FolderOutlineIcon from "@iconify-react/mdi/folder-outline";
-import { DashboardPanel } from "@/features/overview/components/dashboard-panel";
-import { PanelViewAllButton } from "@/features/overview/components/panel-view-all-button";
+import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
+import { PanelViewAllButton } from "@/features/shared/components/panel-view-all-button";
 import {
   getTatBadgeTone,
   type OverviewTableRow,
