@@ -8,6 +8,27 @@ importers:
 
   .:
     dependencies:
+      '@iconify-react/bi':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
+      '@iconify-react/icomoon-free':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
+      '@iconify-react/mage':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
+      '@iconify-react/maki':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
+      '@iconify-react/material-symbols':
+        specifier: ^1.0.15
+        version: 1.0.15(react@19.2.4)
+      '@iconify-react/material-symbols-light':
+        specifier: ^1.0.15
+        version: 1.0.15(react@19.2.4)
+      '@iconify-react/mdi':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
       '@reduxjs/toolkit':
         specifier: ^2.11.2
         version: 2.11.2(react-redux@9.2.0(@types/react@19.2.14)(react@19.2.4)(redux@5.0.1))(react@19.2.4)
@@ -194,6 +215,32 @@ packages:
   '@humanwhocodes/retry@0.4.3':
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
+
+  '@iconify-react/bi@1.0.2':
+    resolution: {integrity: sha512-YWtpk80n/esPA7UA8BlRkKIpzUn6UCens0hgSY9biSI6Np0bqf7+65SpP14UeVQl2bO/Dbq2G9lhvdC8mBZ5GA==}
+
+  '@iconify-react/icomoon-free@1.0.2':
+    resolution: {integrity: sha512-JXAu1Gp2RyWHK54r7SaT1zArqtFi8JQy7kJx8aS7GmFCuZr1+lD+BrjIT2Ajm1WsoczAENqCv5CxP2u0ppczbg==}
+
+  '@iconify-react/mage@1.0.2':
+    resolution: {integrity: sha512-pPy4HYOIBw/jDbVopsx/xY5alF1piX1qW7KKNzkWyK1y2iqYnXxvBCqEIgrUqneP7cz5kX+EH44FnwgsoCafiw==}
+
+  '@iconify-react/maki@1.0.2':
+    resolution: {integrity: sha512-M9R6DckYQ/grwRZiFvNSxdAMpIaa1QKEOHpz5aiK0+RpvVZStdQ202EygwisGBLDIXzJSECHdUpG4/TiDT4lzg==}
+
+  '@iconify-react/material-symbols-light@1.0.15':
+    resolution: {integrity: sha512-wHGa5iCyyjhHUub9Ad+u+1oaVUomCE+ZMknLaw+ZaxB2yYl5DcU1dK0j08cC29ih4cp1rmasheP8DRAcPxKRew==}
+
+  '@iconify-react/material-symbols@1.0.15':
+    resolution: {integrity: sha512-W1Gozj51myhES8tZYDAFMVRFKWyPKaREwJa8BVvOj7yQr/vMaZTMOYiw/MtX4EesUrc01DGeZjf5cMWCsdDuHw==}
+
+  '@iconify-react/mdi@1.0.2':
+    resolution: {integrity: sha512-p7YgR1oh8523fLQydG6cu53I/de5EkAnsbusQVJSqb6PYmN2MiKO9ovo/RkBV/jQNx+hHRG5VHM1YWpUfJeUFQ==}
+
+  '@iconify/css-react@1.0.2':
+    resolution: {integrity: sha512-k33FKG4jGgd8odos+1HdSwCKZOQ5F1heQxwl/zDrA53tLg5IseDPMqsmQbcCEZ6E0Zgcrmfo4ceFSBmbuEvGtw==}
+    peerDependencies:
+      react: '>=18.0.0'
 
   '@iconify/react@6.0.2':
     resolution: {integrity: sha512-SMmC2sactfpJD427WJEDN6PMyznTFMhByK9yLW0gOTtnjzzbsi/Ke/XqsumsavFPwNiXs8jSiYeZTmLCLwO+Fg==}
@@ -2211,6 +2258,53 @@ snapshots:
   '@humanwhocodes/module-importer@1.0.1': {}
 
   '@humanwhocodes/retry@0.4.3': {}
+
+  '@iconify-react/bi@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/icomoon-free@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/mage@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/maki@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/material-symbols-light@1.0.15(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/material-symbols@1.0.15(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/mdi@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify/css-react@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/types': 2.0.0
+      react: 19.2.4
 
   '@iconify/react@6.0.2(react@19.2.4)':
     dependencies:

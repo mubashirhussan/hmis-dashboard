@@ -297,26 +297,7 @@ export const dashboardContentByModule: Record<string, DashboardPageContent> = {
       },
     ],
   },
-  patient: {
-    title: "Patient",
-    subtitle: "Real time overview of patient registration",
-    metrics: overviewMetrics.metrics,
-  },
-  opd: {
-    title: "OPD",
-    subtitle: "Real time overview of outpatient operations",
-    metrics: overviewMetrics.metrics,
-  },
-  ipd: {
-    title: "IPD",
-    subtitle: "Real time overview of inpatient operations",
-    metrics: overviewMetrics.metrics,
-  },
-  pharmacy: {
-    title: "Pharmacy",
-    subtitle: "Real time overview of pharmacy operations",
-    metrics: overviewMetrics.metrics,
-  },
+  
 };
 
 export function getDashboardContent(moduleKey: string): DashboardPageContent {

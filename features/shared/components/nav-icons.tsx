@@ -1,41 +1,47 @@
 import { ChartNoAxesCombined, CircleCheck, Disc, FlaskConical, House, MapPinPlusInside } from "lucide-react";
+import CheckCircleOutlineRoundedIcon from '@iconify-react/material-symbols-light/check-circle-outline-rounded';
 import type { SVGProps } from "react";
+import LabIcon from '@iconify-react/icomoon-free/lab';
+import CircleDoubleIcon from '@iconify-react/mdi/circle-double';
+import BloodBankIcon from '@iconify-react/maki/blood-bank';
+import FinanceModeRoundedIcon from '@iconify-react/material-symbols/finance-mode-rounded';
+import Flower3Icon from '@iconify-react/bi/flower3';
 
 type IconProps = SVGProps<SVGSVGElement>;
 
 export function NavOverviewIcon(props: IconProps) {
   return (
-    <CircleCheck size={20} />
+   <CheckCircleOutlineRoundedIcon height="1.25em" />
   );
 }
 
 export function NavLaboratoryIcon(props: IconProps) {
   return (
-    <FlaskConical size={20} />
+   <LabIcon height="1.25em" />
   );
 }
 
 export function NavImagingIcon(props: IconProps) {
   return (
-    <Disc size={20} />
+    <CircleDoubleIcon height="1.25em" />
   );
 }
 
 export function NavBloodBankIcon(props: IconProps) {
   return (
-     <MapPinPlusInside size={20} />
+    <BloodBankIcon height="1.25em" />
   );
 }
 
 export function NavFinanceIcon(props: IconProps) {
   return (
-    <ChartNoAxesCombined size={20} />
+    <FinanceModeRoundedIcon height="1.25em" />
   );
 }
 
 export function NavHomeServicesIcon(props: IconProps) {
   return (
-     <House size={20} />
+    <Flower3Icon height="1.25em" />
   );
 }
 
