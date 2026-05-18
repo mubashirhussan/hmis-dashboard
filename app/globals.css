@@ -210,6 +210,71 @@
   color: #7e7e7e;
 }
 
+.date-field {
+  box-sizing: border-box;
+  display: flex;
+  width: 197px;
+  height: 50px;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  padding-inline: 12px;
+  opacity: 1;
+  isolation: isolate;
+}
+
+.date-field-label {
+  flex-shrink: 0;
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 100%;
+  letter-spacing: 0.04em;
+  color: #909090;
+}
+
+.date-field-input {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  width: 0;
+  flex: 1 1 0;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 100%;
+  color: #334155;
+  outline: none;
+  appearance: none;
+  margin-top: 1px;
+}
+
+.date-field-input::-webkit-calendar-picker-indicator {
+  display: none;
+  appearance: none;
+}
+
+.date-field-input::-moz-calendar-picker-indicator {
+  display: none;
+}
+
+.date-field-calendar-btn {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
 .navbar-user-name {
   display: block;
   font-family: var(--font-poppins-family), Poppins, sans-serif;

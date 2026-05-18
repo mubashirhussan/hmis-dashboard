@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import {
   Container,
   ContainerFluid,
@@ -27,9 +26,6 @@ export function FeatureDashboardPage({
   onRetry,
   children,
 }: FeatureDashboardPageProps) {
-  const [fromDate, setFromDate] = useState("");
-  const [toDate, setToDate] = useState("");
-
   return (
     <ContainerFluid className="min-h-[calc(100dvh-var(--navbar-height))] overflow-x-clip bg-background">
       <Container className="py-6 sm:py-8">
@@ -38,12 +34,7 @@ export function FeatureDashboardPage({
             <h1 className="dashboard-page-title">{content.title}</h1>
             <p className="dashboard-page-subtitle mt-1">{content.subtitle}</p>
           </div>
-          <DateRangeFields
-            from={fromDate}
-            to={toDate}
-            onFromChange={setFromDate}
-            onToChange={setToDate}
-          />
+          <DateRangeFields />
         </header>
 
         {isError ? (

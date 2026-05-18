@@ -1,11 +1,10 @@
 "use client";
 
-type DateRangeFieldsProps = {
-  from?: string;
-  to?: string;
-  onFromChange?: (value: string) => void;
-  onToChange?: (value: string) => void;
-};
+import { useRef, useState } from "react";
+
+function getTodayIso() {
+  return new Date().toISOString().slice(0, 10);
+}
 
 function CalendarIcon() {
   return (
@@ -25,42 +24,79 @@ function CalendarIcon() {
   );
 }
 
+function openDatePicker(input: HTMLInputElement | null) {
+  if (!input) return;
+
+  try {
+    if (typeof input.showPicker === "function") {
+      void input.showPicker();
+      return;
+    }
+  } catch {
+    // showPicker may throw in unsupported contexts
+  }
+
+  input.focus();
+  input.click();
+}
+
 function DateField({
+  id,
   label,
   value,
   onChange,
 }: {
+  id: string;
   label: string;
   value: string;
-  onChange?: (value: string) => void;
+  onChange: (value: string) => void;
 }) {
+  const inputRef = useRef<HTMLInputElement>(null);
+
   return (
-    <div className="flex min-w-[150px] items-center gap-2 rounded-lg border border-[#e2e8f0] bg-white px-3 py-2.5 sm:min-w-[170px]">
-      <span className="text-sm font-medium text-[#64748b]">{label}</span>
+    <div className="date-field">
+      <label htmlFor={id} className="date-field-label">
+        {label}
+      </label>
       <input
+        ref={inputRef}
+        id={id}
+        name={id}
         type="date"
         value={value}
-        onChange={(event) => onChange?.(event.target.value)}
-        className="min-w-0 flex-1 border-0 bg-transparent p-0 text-sm text-[#334155] outline-none"
-        aria-label={label}
+        onChange={(event) => onChange(event.target.value)}
+        className="date-field-input"
       />
-      <CalendarIcon />
+      <button
+        type="button"
+        className="date-field-calendar-btn"
+        onClick={() => openDatePicker(inputRef.current)}
+        aria-label={`Open calendar for ${label}`}
+      >
+        <CalendarIcon />
+      </button>
     </div>
   );
 }
 
-export function DateRangeFields({
-  from = "",
-  to = "",
-  onFromChange,
-  onToChange,
-}: DateRangeFieldsProps) {
-  const today = new Date().toISOString().slice(0, 10);
+export function DateRangeFields() {
+  const [fromDate, setFromDate] = useState(getTodayIso);
+  const [toDate, setToDate] = useState(getTodayIso);
 
   return (
     <div className="flex flex-wrap items-center gap-3">
-      <DateField label="From" value={from || today} onChange={onFromChange} />
-      <DateField label="To" value={to || today} onChange={onToChange} />
+      <DateField
+        id="dashboard-date-from"
+        label="From"
+        value={fromDate}
+        onChange={setFromDate}
+      />
+      <DateField
+        id="dashboard-date-to"
+        label="To"
+        value={toDate}
+        onChange={setToDate}
+      />
     </div>
   );
 }

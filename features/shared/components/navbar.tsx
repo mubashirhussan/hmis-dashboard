@@ -78,7 +78,7 @@ export function Navbar() {
 
         <nav
           aria-label="Main"
-          className="hidden min-w-0 flex-1 items-stretch justify-center gap-1 lg:flex lg:gap-2 xl:gap-3"
+          className="hidden min-w-0 flex-1 items-stretch justify-center gap-1 overflow-x-auto xl:flex xl:gap-2 2xl:gap-3 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
         >
           {navItems.map((item) => {
             const active = isNavActive(pathname, item.href);
@@ -110,7 +110,7 @@ export function Navbar() {
 
         <nav
           aria-label="Main"
-          className="hidden min-w-0 flex-1 overflow-x-auto md:flex lg:hidden"
+          className="hidden min-w-0 flex-1 overflow-x-auto lg:flex xl:hidden"
         >
           <div className="flex items-stretch gap-1 px-1">
             {navItems.map((item) => {
@@ -213,7 +213,7 @@ export function Navbar() {
 
           <button
             type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-lg text-[#005696] hover:bg-zinc-100 md:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-lg text-[#005696] hover:bg-zinc-100 lg:hidden"
             aria-expanded={mobileOpen}
             aria-controls={menuId}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
@@ -232,14 +232,14 @@ export function Navbar() {
         <>
           <button
             type="button"
-            className="fixed inset-0 z-40 bg-black/30 md:hidden"
+            className="fixed inset-0 z-40 bg-black/30 lg:hidden"
             aria-label="Close menu overlay"
             onClick={() => setMobileOpen(false)}
           />
           <nav
             id={menuId}
             aria-label="Main mobile"
-            className="fixed inset-x-0 top-[var(--navbar-height)] z-50 max-h-[calc(100dvh-var(--navbar-height))] overflow-y-auto border-b border-zinc-200 bg-white px-4 py-3 shadow-lg md:hidden"
+            className="fixed inset-x-0 top-[var(--navbar-height)] z-50 max-h-[calc(100dvh-var(--navbar-height))] overflow-y-auto border-b border-zinc-200 bg-white px-4 py-3 shadow-lg lg:hidden"
           >
             <ul className="space-y-1">
               {navItems.map((item) => {
