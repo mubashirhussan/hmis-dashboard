@@ -1,48 +1,39 @@
-import { ChartNoAxesCombined, CircleCheck, Disc, FlaskConical, House, MapPinPlusInside } from "lucide-react";
-import CheckCircleOutlineRoundedIcon from '@iconify-react/material-symbols-light/check-circle-outline-rounded';
 import type { SVGProps } from "react";
-import LabIcon from '@iconify-react/icomoon-free/lab';
-import CircleDoubleIcon from '@iconify-react/mdi/circle-double';
-import BloodBankIcon from '@iconify-react/maki/blood-bank';
-import FinanceModeRoundedIcon from '@iconify-react/material-symbols/finance-mode-rounded';
-import Flower3Icon from '@iconify-react/bi/flower3';
+import { navIconifyByModule } from "@/features/shared/components/iconify-icons";
+import type { NavItemId } from "@/features/shared/config/nav-items";
 
 type IconProps = SVGProps<SVGSVGElement>;
 
+function NavIconify({
+  module,
+  className,
+}: IconProps & { module: NavItemId }) {
+  const Icon = navIconifyByModule[module];
+  return <Icon height="1.25em" className={className} />;
+}
+
 export function NavOverviewIcon(props: IconProps) {
-  return (
-   <CheckCircleOutlineRoundedIcon height="1.25em" />
-  );
+  return <NavIconify module="overview" {...props} />;
 }
 
 export function NavLaboratoryIcon(props: IconProps) {
-  return (
-   <LabIcon height="1.25em" />
-  );
+  return <NavIconify module="laboratory" {...props} />;
 }
 
 export function NavImagingIcon(props: IconProps) {
-  return (
-    <CircleDoubleIcon height="1.25em" />
-  );
+  return <NavIconify module="imaging" {...props} />;
 }
 
 export function NavBloodBankIcon(props: IconProps) {
-  return (
-    <BloodBankIcon height="1.25em" />
-  );
+  return <NavIconify module="blood-bank" {...props} />;
 }
 
 export function NavFinanceIcon(props: IconProps) {
-  return (
-    <FinanceModeRoundedIcon height="1.25em" />
-  );
+  return <NavIconify module="finance" {...props} />;
 }
 
 export function NavHomeServicesIcon(props: IconProps) {
-  return (
-    <Flower3Icon height="1.25em" />
-  );
+  return <NavIconify module="home-services" {...props} />;
 }
 
 export function NavBellIcon(props: IconProps) {
