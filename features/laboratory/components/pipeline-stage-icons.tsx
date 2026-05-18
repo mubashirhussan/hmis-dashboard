@@ -27,6 +27,12 @@ export function PipelineStageIconView({ icon }: PipelineStageIconViewProps) {
   const IconComponent = pipelineStageIconRegistry[icon];
 
   return (
-    <IconComponent height="20" width="20" style={{ color: "#ffffff" }} aria-hidden />
+    <IconComponent
+      className="sample-pipeline__stage-icon"
+      width="100%"
+      height="100%"
+      style={{ color: "currentColor" }}
+      aria-hidden
+    />
   );
 }

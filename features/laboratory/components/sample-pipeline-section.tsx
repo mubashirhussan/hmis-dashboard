@@ -1,7 +1,7 @@
 "use client";
 
 import ViewGridOutlineIcon from "@iconify-react/mdi/view-grid-outline";
-import { PipelineStageIconView } from "@/features/laboratory/components/pipeline-stage-icons";
+import { PipelineStageCard } from "@/features/laboratory/components/pipeline-stage-card";
 import {
   samplePipelineStages,
   samplePipelineTotal,
@@ -47,18 +47,7 @@ export function SamplePipelineSection() {
         <div className="sample-pipeline__stages" role="list">
           {samplePipelineStages.map((stage, index) => (
             <div key={stage.id} className="sample-pipeline__stage-wrap" role="listitem">
-              <article
-                className={[
-                  "sample-pipeline__stage",
-                  `sample-pipeline__stage--${stage.tone}`,
-                ].join(" ")}
-              >
-                <p className="sample-pipeline__stage-label">{stage.label}</p>
-                <p className="sample-pipeline__stage-value">{stage.value}</p>
-                <div className="sample-pipeline__stage-arch" aria-hidden>
-                  <PipelineStageIconView icon={stage.icon} />
-                </div>
-              </article>
+              <PipelineStageCard stage={stage} />
               {index < samplePipelineStages.length - 1 ? (
                 <PipelineConnector />
               ) : null}
