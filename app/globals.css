@@ -389,6 +389,663 @@
   font-weight: 500;
 }
 
+/* Overview panels below metric cards */
+.overview-insights {
+  display: grid;
+  width: 100%;
+  gap: 10px;
+  grid-template-columns: 1fr;
+}
+
+@container app (min-width: 1024px) {
+  .overview-insights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.overview-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dashboard-panel {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgb(15 23 42 / 6%);
+  padding: 20px 22px 24px;
+}
+
+.dashboard-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dashboard-panel__header-main {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+}
+
+.dashboard-panel__icon {
+  display: flex;
+  width: 51px;
+  height: 51px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #f3f7ff;
+}
+
+.dashboard-panel__title {
+  margin: 0;
+  font-family: var(--font-manrope-family), Manrope, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #1e293b;
+}
+
+.dashboard-panel__divider {
+  height: 1px;
+  margin: 16px 0 20px;
+  background: #e8edf5;
+}
+
+.dashboard-panel__action {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #c5d9f0;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 8px 14px;
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #026bb1;
+  cursor: pointer;
+}
+
+.dashboard-panel__action-arrow {
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* Patient distribution */
+.patient-distribution {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@container app (min-width: 900px) {
+  .patient-distribution {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.patient-distribution__chart-wrap {
+  position: relative;
+  width: min(100%, 240px);
+  margin-inline: auto;
+  flex-shrink: 0;
+}
+
+.patient-distribution__chart {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.patient-distribution__segment {
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.patient-distribution__center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.patient-distribution__center-label {
+  margin: 0;
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #64748b;
+}
+
+.patient-distribution__center-value {
+  margin: 4px 0 0;
+  font-family: var(--font-manrope-family), Manrope, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  color: #0f172a;
+}
+
+.patient-distribution__tooltip {
+  position: absolute;
+  top: 8%;
+  right: -4%;
+  min-width: 120px;
+  border: 2px solid #7cb9e8;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 8px 10px;
+  box-shadow: 0 4px 12px rgb(15 23 42 / 10%);
+  pointer-events: none;
+}
+
+.patient-distribution__tooltip-label {
+  margin: 0;
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.patient-distribution__tooltip-value {
+  margin: 4px 0 0;
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 11px;
+  color: #64748b;
+}
+
+.patient-distribution__legend {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.patient-distribution__legend-item {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 12px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  border-bottom: 1px solid #eef2f7;
+  background: transparent;
+  padding: 12px 4px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.patient-distribution__legend-item:last-child {
+  border-bottom: 0;
+}
+
+.patient-distribution__legend-item--active {
+  background: #f8fbff;
+}
+
+.patient-distribution__legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.patient-distribution__legend-label {
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #526594;
+}
+
+.patient-distribution__legend-value {
+  font-family: var(--font-manrope-family), Manrope, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* TAT compliance — Figma Frame 2830 */
+.tat-compliance-panel .dashboard-panel__icon {
+  background: #026bb1;
+}
+
+.overview-panel__view-all {
+  border: 1px solid #b8d9f5;
+  border-radius: 10px;
+  background: #e8f3fc;
+  padding: 9px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #026bb1;
+}
+
+.tat-compliance {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tat-compliance__row {
+  display: grid;
+  align-items: center;
+  gap: 0 20px;
+  grid-template-columns: 118px minmax(0, 1fr) 58px;
+}
+
+.tat-compliance__label {
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #526594;
+}
+
+.tat-compliance__bar-wrap {
+  position: relative;
+  min-width: 0;
+  padding-top: 22px;
+}
+
+.tat-compliance__value {
+  position: absolute;
+  top: 2px;
+  transform: translateX(-50%);
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1;
+  color: #a8b5c6;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.tat-compliance__track {
+  height: 11px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e8edf5;
+}
+
+.tat-compliance__fill {
+  height: 100%;
+  min-width: 2px;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.tat-compliance__fill--good {
+  background: #26c281;
+}
+
+.tat-compliance__fill--warn {
+  background: #f9b115;
+}
+
+.tat-compliance__fill--bad {
+  background: #f3435f;
+}
+
+.tat-compliance__target {
+  justify-self: end;
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #a8b5c6;
+  white-space: nowrap;
+}
+
+@container app (max-width: 560px) {
+  .tat-compliance__row {
+    grid-template-columns: 100px minmax(0, 1fr) 54px;
+    gap: 0 14px;
+  }
+
+  .tat-compliance__label {
+    font-size: 14px;
+  }
+
+  .tat-compliance__target {
+    font-size: 12px;
+  }
+}
+
+/* Overview data tables — Corporate Clients / Collection Centers */
+.overview-table-panel .dashboard-panel__icon {
+  background: #026bb1;
+}
+
+.overview-table {
+  min-width: 0;
+}
+
+.overview-table__header,
+.overview-table__row {
+  display: grid;
+  align-items: center;
+  grid-template-columns: minmax(0, 1.45fr) repeat(4, minmax(0, 1fr));
+  column-gap: 8px;
+}
+
+.overview-table__header {
+  border-radius: 8px;
+  background: #f4f7fb;
+  padding: 10px 14px;
+}
+
+.overview-table__header .overview-table__cell {
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.overview-table__body {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.overview-table__row {
+  border-bottom: 1px solid #eef2f7;
+  padding: 14px;
+}
+
+.overview-table__row:last-child {
+  border-bottom: 0;
+}
+
+.overview-table__cell {
+  min-width: 0;
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #64748b;
+  text-align: center;
+}
+
+.overview-table__cell--name {
+  text-align: left;
+  font-weight: 600;
+  color: #334155;
+}
+
+.overview-table__cell--tat {
+  display: flex;
+  justify-content: center;
+}
+
+.overview-table__tat {
+  display: inline-flex;
+  min-width: 52px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-family: var(--font-manrope-family), Manrope, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.overview-table__tat--good {
+  background: #e6f7ef;
+  color: #1a9b5c;
+}
+
+.overview-table__tat--warn {
+  background: #fef3e2;
+  color: #d97706;
+}
+
+.overview-table__tat--bad {
+  background: #fde8ec;
+  color: #e11d48;
+}
+
+@container app (max-width: 640px) {
+  .overview-table__header,
+  .overview-table__row {
+    grid-template-columns: minmax(0, 1.2fr) repeat(4, minmax(0, 0.85fr));
+    column-gap: 4px;
+    padding-inline: 10px;
+  }
+
+  .overview-table__cell {
+    font-size: 12px;
+  }
+
+  .overview-table__tat {
+    min-width: 44px;
+    padding: 3px 8px;
+    font-size: 11px;
+  }
+}
+
+/* Department of Workload */
+.overview-workload {
+  width: 100%;
+}
+
+.overview-workload-panel .dashboard-panel__icon {
+  background: #026bb1;
+}
+
+.overview-workload__grid {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  list-style: none;
+}
+
+@container app (max-width: 1100px) {
+  .overview-workload__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@container app (max-width: 520px) {
+  .overview-workload__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.workload-dept-card {
+  --workload-accent: #026bb1;
+  --workload-accent-soft: #e8f3fc;
+  --workload-accent-muted: #7cb9e8;
+
+  position: relative;
+  box-sizing: border-box;
+  display: grid;
+  min-height: 101px;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  overflow: hidden;
+  border: 1px solid #e8edf5;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 14px 14px 16px;
+}
+
+.workload-dept-card--highlighted {
+  border-color: #b8d9f5;
+  box-shadow:
+    0 0 0 1px rgb(2 107 177 / 12%),
+    0 8px 24px rgb(2 107 177 / 10%);
+}
+
+.workload-dept-card--blue {
+  --workload-accent: #026bb1;
+  --workload-accent-soft: #e8f3fc;
+  --workload-accent-muted: #7cb9e8;
+}
+
+.workload-dept-card--rose {
+  --workload-accent: #f3435f;
+  --workload-accent-soft: #fde8ec;
+  --workload-accent-muted: #f9a8b4;
+}
+
+.workload-dept-card--green {
+  --workload-accent: #26c281;
+  --workload-accent-soft: #e6f7ef;
+  --workload-accent-muted: #86efac;
+}
+
+.workload-dept-card--orange {
+  --workload-accent: #f9b115;
+  --workload-accent-soft: #fef3e2;
+  --workload-accent-muted: #fcd34d;
+}
+
+.workload-dept-card--pink {
+  --workload-accent: #ec4899;
+  --workload-accent-soft: #fce7f3;
+  --workload-accent-muted: #f9a8d4;
+}
+
+.workload-dept-card--purple {
+  --workload-accent: #8b5cf6;
+  --workload-accent-soft: #ede9fe;
+  --workload-accent-muted: #c4b5fd;
+}
+
+.workload-dept-card__icon-wrap {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--workload-accent-soft);
+  color: var(--workload-accent);
+}
+
+.workload-dept-card__icon {
+  width: 24px;
+  height: 24px;
+}
+
+.workload-dept-card__body {
+  min-width: 0;
+  padding-right: 72px;
+}
+
+.workload-dept-card__label {
+  margin: 0;
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #526594;
+}
+
+.workload-dept-card__value {
+  margin: 4px 0 0;
+  font-family: var(--font-manrope-family), Manrope, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  color: #0f172a;
+}
+
+.workload-dept-card__pending {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 999px;
+  background: var(--workload-accent-soft);
+  padding: 4px 8px;
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--workload-accent);
+  white-space: nowrap;
+}
+
+.workload-dept-card__dot {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--workload-accent);
+}
+
+.workload-dept-card__accent {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 64px;
+  height: 64px;
+  background: var(--workload-accent);
+  opacity: 0.12;
+  border-top-left-radius: 100%;
+  pointer-events: none;
+}
+
+.workload-dept-card__accent::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 36px;
+  height: 36px;
+  background: var(--workload-accent);
+  opacity: 0.22;
+  border-top-left-radius: 100%;
+  content: "";
+}
+
+@container app (max-width: 520px) {
+  .workload-dept-card__value {
+    font-size: 24px;
+  }
+
+  .workload-dept-card__body {
+    padding-right: 64px;
+  }
+
+  .workload-dept-card__pending {
+    font-size: 10px;
+    padding: 3px 7px;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

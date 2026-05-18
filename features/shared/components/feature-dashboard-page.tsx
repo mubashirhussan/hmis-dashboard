@@ -61,7 +61,9 @@ export function FeatureDashboardPage({
           <MetricCardsRow metrics={content.metrics} />
         )}
 
-        {children ? <div className="mt-8">{children}</div> : null}
+        {children ? (
+          <div className="overview-sections mt-8">{children}</div>
+        ) : null}
       </Container>
     </ContainerFluid>
   );
