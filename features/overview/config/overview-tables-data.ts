@@ -7,9 +7,8 @@ export type OverviewTableRow = {
   pending: number;
 };
 
-export const corporateClientsRows: OverviewTableRow[] = [
+const corporateClientSeed: Omit<OverviewTableRow, "id">[] = [
   {
-    id: "main-karachi",
     name: "Main-Karachi",
     samples: 234,
     tat: 94,
@@ -17,7 +16,41 @@ export const corporateClientsRows: OverviewTableRow[] = [
     pending: 14,
   },
   {
-    id: "engro",
+    name: "CC-Gulshan",
+    samples: 198,
+    tat: 96,
+    done: 186,
+    pending: 12,
+  },
+  {
+    name: "CC-Clifton",
+    samples: 167,
+    tat: 96,
+    done: 160,
+    pending: 7,
+  },
+  {
+    name: "CC-Korangi",
+    samples: 143,
+    tat: 91,
+    done: 130,
+    pending: 13,
+  },
+  {
+    name: "CC-Nazimabad",
+    samples: 112,
+    tat: 85,
+    done: 95,
+    pending: 17,
+  },
+  {
+    name: "CC-North",
+    samples: 98,
+    tat: 96,
+    done: 94,
+    pending: 4,
+  },
+  {
     name: "Engro Corp",
     samples: 189,
     tat: 96,
@@ -25,7 +58,6 @@ export const corporateClientsRows: OverviewTableRow[] = [
     pending: 8,
   },
   {
-    id: "lucky-cement",
     name: "Lucky Cement",
     samples: 156,
     tat: 88,
@@ -33,7 +65,6 @@ export const corporateClientsRows: OverviewTableRow[] = [
     pending: 19,
   },
   {
-    id: "packages",
     name: "Packages Ltd",
     samples: 98,
     tat: 96,
@@ -41,7 +72,6 @@ export const corporateClientsRows: OverviewTableRow[] = [
     pending: 4,
   },
   {
-    id: "hbl",
     name: "HBL Panel",
     samples: 87,
     tat: 72,
@@ -49,6 +79,24 @@ export const corporateClientsRows: OverviewTableRow[] = [
     pending: 24,
   },
 ];
+
+function buildCorporateClientsRows(count: number): OverviewTableRow[] {
+  return Array.from({ length: count }, (_, index) => {
+    const seed = corporateClientSeed[index % corporateClientSeed.length];
+    const cycle = Math.floor(index / corporateClientSeed.length);
+
+    return {
+      id: `corporate-client-${index + 1}`,
+      name: cycle === 0 ? seed.name : `${seed.name} ${cycle + 1}`,
+      samples: Math.max(seed.samples - (index % 7) * 4, 40),
+      tat: seed.tat,
+      done: Math.max(seed.done - (index % 5) * 2, 20),
+      pending: seed.pending + (index % 4),
+    };
+  });
+}
+
+export const corporateClientsRows = buildCorporateClientsRows(100);
 
 export const collectionCentersRows: OverviewTableRow[] = [
   {

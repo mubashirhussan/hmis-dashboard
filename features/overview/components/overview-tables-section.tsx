@@ -14,6 +14,9 @@ export function OverviewTablesSection() {
         title="Corporate Clients"
         nameColumnLabel="Panels"
         rows={corporateClientsRows}
+        pagination
+        pageSize={6}
+        totalCount={100}
       />
       <OverviewDataTableCard
         title="Collection Centers"
