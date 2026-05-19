@@ -311,7 +311,7 @@
   flex-shrink: 0;
   font-family: var(--font-roboto-family), Roboto, sans-serif;
   font-weight: 500;
-  font-size: 21px;
+  font-size: 17px;
   line-height: 100%;
   letter-spacing: 0.04em;
   color: #909090;
@@ -405,11 +405,13 @@
 
 .overview-sections,
 .dashboard-sections,
-.laboratory-sections {
+.laboratory-sections,
+.imaging-sections,
+.blood-bank-sections {
   display: flex;
   width: 100%;
   flex-direction: column;
-  gap: 10px;
+  gap: 16px;
 }
 
 .dashboard-panel {
@@ -1054,6 +1056,26 @@
   background: #026bb1;
 }
 
+/* Blood bank dashboard panels */
+.blood-bank-panel .dashboard-panel__icon {
+  background: #026bb1;
+}
+
+.blood-group-badge {
+  display: inline-flex;
+  min-width: 36px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #fef0f2;
+  padding: 4px 10px;
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  color: #e11d48;
+}
+
 .laboratory-bottom-row {
   display: grid;
   width: 100%;
@@ -1083,7 +1105,7 @@
 .sample-pipeline__stages {
   display: flex;
   width: 100%;
-  align-items: stretch;
+  align-items: center;
   gap: 0;
   overflow-x: auto;
   padding-bottom: 4px;
@@ -1092,18 +1114,49 @@
 
 .sample-pipeline__stage-wrap {
   display: flex;
-  min-width: 0;
-  flex: 1 1 0;
-  align-items: center;
+  flex: 0 0 auto;
+  flex-shrink: 0;
 }
 
+/* 115px gap between stages; icon sized on .sample-pipeline__connector-icon */
 .sample-pipeline__connector {
   display: flex;
+  flex: 0 0 115px;
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  padding: 0 4px;
-  color: #cbd5e1;
+}
+
+.sample-pipeline__connector-icon {
+  display: block;
+  width: 24px;
+  height: 16px;
+  flex-shrink: 0;
+  color: #b8bfda;
+  opacity: 1;
+}
+
+/* Above desktop: grow cards and gaps proportionally (143 : 115) */
+@container app (min-width: 1200px) {
+  .sample-pipeline__stages {
+    overflow-x: visible;
+  }
+
+  .sample-pipeline__stage-wrap {
+    flex: 143 1 143px;
+    min-width: 0;
+  }
+
+  .sample-pipeline__connector {
+    flex: 115 1 115px;
+    min-width: 0;
+  }
+
+  .sample-pipeline__stage {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 143 / 165;
+  }
 }
 
 /* Figma card 143×165 — Frame 2846 layout */
@@ -1115,9 +1168,9 @@
   container-name: pipeline-stage;
   position: relative;
   box-sizing: border-box;
-  width: 100%;
-  min-width: 0;
-  aspect-ratio: 143 / 165;
+  width: 143px;
+  height: 165px;
+  flex-shrink: 0;
   overflow: hidden;
   border: 1px solid var(--stage-color);
   border-radius: 15px;
@@ -1162,9 +1215,9 @@
   width: 74.83cqi; /* 107px */
   margin: 0;
   font-family: var(--font-roboto-family), Roboto, sans-serif;
-  font-size: 8.39cqi; /* 12px @ 143px */
   font-weight: 600;
-  line-height: normal;
+  font-size: 8.39cqi; /* 12px @ 143px */
+  line-height: 100%;
   letter-spacing: 0.04em;
   color: var(--stage-color);
 }
@@ -1216,9 +1269,9 @@
   z-index: 2;
   margin: 0;
   font-family: var(--font-manrope-family), Manrope, sans-serif;
-  font-size: 20.28cqi; /* 29px @ 143px */
   font-weight: 700;
-  line-height: normal;
+  font-size: 20.28cqi; /* 29px @ 143px */
+  line-height: 100%;
   letter-spacing: 0.04em;
   white-space: nowrap;
   color: var(--stage-color);
@@ -1415,9 +1468,259 @@
   }
 }
 
-@container app (max-width: 720px) {
-  .sample-pipeline__stage-wrap {
-    flex: 0 0 min(143px, 42vw);
+/* Imaging dashboard panels */
+.imaging-panel .dashboard-panel__icon {
+  background: #026bb1;
+}
+
+.imaging-productivity-panel .dashboard-panel__action {
+  border-color: #b8d9f5;
+}
+
+.imaging-top-row {
+  display: grid;
+  width: 100%;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+  .imaging-top-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@container app (min-width: 1024px) {
+  .imaging-top-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.imaging-table {
+  min-width: 0;
+}
+
+.imaging-table__header,
+.imaging-table__row {
+  display: grid;
+  align-items: center;
+  grid-template-columns: minmax(0, 1.45fr) repeat(4, minmax(0, 1fr));
+  column-gap: 8px;
+}
+
+.imaging-table__header {
+  border-radius: 8px;
+  background: #f4f7fb;
+  padding: 10px 14px;
+}
+
+.imaging-table__header .imaging-table__cell {
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.imaging-table__body {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.imaging-table__row {
+  border-bottom: 1px solid #eef2f7;
+  padding: 14px;
+}
+
+.imaging-table__row:last-child {
+  border-bottom: 0;
+}
+
+.imaging-table__cell {
+  min-width: 0;
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #64748b;
+  text-align: center;
+}
+
+.imaging-table__cell--name {
+  text-align: left;
+  font-weight: 600;
+  color: #334155;
+}
+
+.imaging-table__cell--active {
+  font-weight: 600;
+  color: #026bb1;
+}
+
+.imaging-table__cell--done {
+  color: #64748b;
+}
+
+.imaging-table__cell--pending {
+  font-weight: 500;
+  color: #f59e0b;
+}
+
+.imaging-table__cell--performed {
+  font-weight: 500;
+  color: #026bb1;
+}
+
+.imaging-table__cell--tat {
+  display: flex;
+  justify-content: center;
+}
+
+.imaging-table__tat {
+  display: inline-flex;
+  min-width: 52px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-family: var(--font-manrope-family), Manrope, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.imaging-table__tat--good {
+  background: #e6f7ef;
+  color: #1a9b5c;
+}
+
+.imaging-table__tat--warn {
+  background: #fef3e2;
+  color: #d97706;
+}
+
+.imaging-table__tat--bad {
+  background: #fde8ec;
+  color: #e11d48;
+}
+
+.imaging-productivity {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.imaging-productivity__row {
+  display: grid;
+  align-items: center;
+  gap: 0 24px;
+  grid-template-columns: 140px minmax(0, 1fr) 80px;
+  padding: 18px 0;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.imaging-productivity__row:first-child {
+  padding-top: 4px;
+}
+
+.imaging-productivity__row:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.imaging-productivity__name {
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #026bb1;
+}
+
+.imaging-productivity__bar-wrap {
+  position: relative;
+  min-width: 0;
+  padding-top: 24px;
+}
+
+.imaging-productivity__reports {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.2;
+  white-space: nowrap;
+  color: #94a3b8;
+}
+
+.imaging-productivity__track {
+  height: 12px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e8edf5;
+}
+
+.imaging-productivity__fill {
+  height: 100%;
+  min-width: 2px;
+  border-radius: 999px;
+}
+
+.imaging-productivity__fill--good {
+  background: #26c281;
+}
+
+.imaging-productivity__fill--warn {
+  background: #f9b115;
+}
+
+.imaging-productivity__avg {
+  justify-self: end;
+  font-family: var(--font-manrope-family), Manrope, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #1e293b;
+  white-space: nowrap;
+}
+
+@container app (max-width: 640px) {
+  .imaging-table__header,
+  .imaging-table__row {
+    grid-template-columns: minmax(0, 1.2fr) repeat(4, minmax(0, 0.85fr));
+    column-gap: 4px;
+    padding-inline: 10px;
+  }
+
+  .imaging-table__cell {
+    font-size: 12px;
+  }
+
+  .imaging-table__tat {
+    min-width: 44px;
+    padding: 3px 8px;
+    font-size: 11px;
+  }
+
+  .imaging-productivity__row {
+    grid-template-columns: 108px minmax(0, 1fr) 68px;
+    gap: 0 12px;
+    padding: 14px 0;
+  }
+
+  .imaging-productivity__name {
+    font-size: 14px;
+  }
+
+  .imaging-productivity__avg {
+    font-size: 12px;
   }
 }
 

@@ -1,5 +1,6 @@
 "use client";
 
+import { Fragment } from "react";
 import ViewGridOutlineIcon from "@iconify-react/mdi/view-grid-outline";
 import { PipelineStageCard } from "@/features/laboratory/components/pipeline-stage-card";
 import {
@@ -7,23 +8,8 @@ import {
   samplePipelineTotal,
 } from "@/features/laboratory/config/laboratory-insights-data";
 import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
+import { PipelineConnector } from "@/features/laboratory/components/pipeline-connector";
 import { PanelViewAllButton } from "@/features/shared/components/panel-view-all-button";
-
-function PipelineConnector() {
-  return (
-    <span className="sample-pipeline__connector" aria-hidden>
-      <svg viewBox="0 0 16 16" width="14" height="14" fill="none">
-        <path
-          d="M6 4l4 4-4 4"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </span>
-  );
-}
 
 export function SamplePipelineSection() {
   const progressStages = samplePipelineStages.filter((stage) => stage.inProgress);
@@ -46,12 +32,14 @@ export function SamplePipelineSection() {
       <div className="sample-pipeline">
         <div className="sample-pipeline__stages" role="list">
           {samplePipelineStages.map((stage, index) => (
-            <div key={stage.id} className="sample-pipeline__stage-wrap" role="listitem">
-              <PipelineStageCard stage={stage} />
+            <Fragment key={stage.id}>
+              <div className="sample-pipeline__stage-wrap" role="listitem">
+                <PipelineStageCard stage={stage} />
+              </div>
               {index < samplePipelineStages.length - 1 ? (
                 <PipelineConnector />
               ) : null}
-            </div>
+            </Fragment>
           ))}
         </div>
 
