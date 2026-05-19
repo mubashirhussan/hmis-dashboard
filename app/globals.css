@@ -1118,6 +1118,192 @@
   background: #026bb1;
 }
 
+.blood-group-inventory .workload-dept-card--highlighted {
+  border-color: #f3435f;
+  box-shadow:
+    0 2px 8px rgb(15 23 42 / 6%),
+    0 0 0 1px rgb(243 67 95 / 18%);
+}
+
+/* Blood group status badges */
+.blood-group-inventory .workload-dept-card__pending--ok {
+  background: #e6f7ef;
+  color: #26c281;
+}
+
+.blood-group-inventory .workload-dept-card__pending--low {
+  background: #fef3e2;
+  color: #f9b115;
+}
+
+.blood-group-inventory .workload-dept-card__pending--critical {
+  background: #fde8ec;
+  color: #f3435f;
+}
+
+.blood-group-card__status-icon {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+/* Blood group inventory — 4×2 grid, workload-dept-card layout */
+.blood-group-inventory {
+  width: 100%;
+}
+
+.blood-group-inventory .workload-dept-card {
+  box-shadow: 0 2px 10px rgb(15 23 42 / 6%);
+}
+
+.blood-group-inventory__grid {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  list-style: none;
+}
+
+@container app (max-width: 1100px) {
+  .blood-group-inventory__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@container app (max-width: 520px) {
+  .blood-group-inventory__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.blood-group-inventory__summary {
+  display: grid;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed #d8dee8;
+  gap: 0;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.blood-group-inventory__summary-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 20px;
+}
+
+.blood-group-inventory__summary-item--bordered {
+  border-left: 1px solid #e8edf5;
+}
+
+.blood-group-inventory__summary-icon {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.blood-group-inventory__summary-icon--blue {
+  background: #ecf3fe;
+  color: #026bb1;
+}
+
+.blood-group-inventory__summary-icon--green {
+  background: #e6f7ef;
+  color: #26c281;
+}
+
+.blood-group-inventory__summary-icon--orange {
+  background: #fef3e2;
+  color: #f9b115;
+}
+
+.blood-group-inventory__summary-icon--red {
+  background: #fde8ec;
+  color: #f3435f;
+}
+
+.blood-group-inventory__summary-body {
+  min-width: 0;
+}
+
+.blood-group-inventory__summary-title {
+  margin: 0;
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #94a3b8;
+}
+
+.blood-group-inventory__summary-value {
+  margin: 4px 0 0;
+  font-family: var(--font-manrope-family), Manrope, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000000;
+}
+
+.blood-group-inventory__summary-value--blue {
+  color: #000000;
+}
+
+.blood-group-inventory__summary-value--green {
+  color: #26c281;
+}
+
+.blood-group-inventory__summary-value--orange {
+  color: #f9b115;
+}
+
+.blood-group-inventory__summary-value--red {
+  color: #f3435f;
+}
+
+.blood-group-inventory__summary-label {
+  margin: 2px 0 0;
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #64748b;
+}
+
+@container app (max-width: 900px) {
+  .blood-group-inventory__summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .blood-group-inventory__summary-item--bordered {
+    border-left: 0;
+  }
+
+  .blood-group-inventory__summary-item:nth-child(odd) {
+    border-right: 1px solid #e8edf5;
+  }
+}
+
+@container app (max-width: 520px) {
+  .blood-group-inventory__summary {
+    grid-template-columns: 1fr;
+  }
+
+  .blood-group-inventory__summary-item:nth-child(odd) {
+    border-right: 0;
+  }
+
+  .blood-group-inventory__summary-item--bordered {
+    border-top: 1px solid #e8edf5;
+    padding-top: 16px;
+  }
+}
+
 .blood-group-badge {
   display: inline-flex;
   min-width: 36px;
