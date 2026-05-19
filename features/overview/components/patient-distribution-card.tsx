@@ -1,8 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import AccountGroupOutlineIcon from "@iconify-react/mdi/account-group-outline";
 import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
+import CrmLeadDistributionIcon from '@iconify-react/streamline-freehand/crm-lead-distribution';
 import {
   patientDistributionSegments,
   patientDistributionTotal,
@@ -41,10 +41,8 @@ export function PatientDistributionCard() {
     <DashboardPanel
       title="Patient Distribution"
       icon={
-        <AccountGroupOutlineIcon
-          height="24"
-          style={{ color: "#026bb1" }}
-        />
+      
+        <CrmLeadDistributionIcon height="24" color="white" />
       }
     >
       <div className="patient-distribution">
@@ -86,9 +84,13 @@ export function PatientDistributionCard() {
           </svg>
 
           <div className="patient-distribution__center">
-            <p className="patient-distribution__center-label">Total No of Patients :</p>
-            <p className="patient-distribution__center-value">
-              {patientDistributionTotal}
+            <p className="patient-distribution__center-text">
+              <span className="patient-distribution__center-label">
+                Total No of Patients :
+              </span>{" "}
+              <span className="patient-distribution__center-value">
+                {patientDistributionTotal}
+              </span>
             </p>
           </div>
 

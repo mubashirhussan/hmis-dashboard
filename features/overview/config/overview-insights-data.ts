@@ -6,12 +6,12 @@ export type PatientDistributionSegment = {
 };
 
 export const patientDistributionSegments: PatientDistributionSegment[] = [
-  { id: "opd", label: "OPD Walk-In", value: 218, color: "#7cb9e8" },
-  { id: "ipd", label: "IPD Inpatient", value: 87, color: "#026bb1" },
-  { id: "er", label: "ER Emergency", value: 42, color: "#ef4444" },
-  { id: "panel", label: "Panel / Corporate", value: 56, color: "#8b5cf6" },
-  { id: "home", label: "Home Collection", value: 23, color: "#14b8a6" },
-  { id: "referral", label: "Referral", value: 12, color: "#f59e0b" },
+  { id: "opd", label: "OPD Walk-In", value: 218, color: "#2FB8F5" },
+  { id: "ipd", label: "IPD Inpatient", value: 87, color: "#5095F8" },
+  { id: "er", label: "ER Emergency", value: 42, color: "#F25555" },
+  { id: "panel", label: "Panel / Corporate", value: 56, color: "#956DF7" },
+  { id: "home", label: "Home Collection", value: 23, color: "#0BBBD8" },
+  { id: "referral", label: "Referral", value: 12, color: "#F8AD16" },
 ];
 
 export const patientDistributionTotal = patientDistributionSegments.reduce(
