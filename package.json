@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@iconify-react/bi": "^1.0.2",
+    "@iconify-react/bxs": "^1.0.2",
+    "@iconify-react/carbon": "^1.0.4",
     "@iconify-react/formkit": "^1.0.2",
     "@iconify-react/icomoon-free": "^1.0.2",
     "@iconify-react/mage": "^1.0.2",

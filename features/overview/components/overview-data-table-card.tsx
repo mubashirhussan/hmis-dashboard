@@ -1,12 +1,12 @@
 "use client";
 
-import FolderOutlineIcon from "@iconify-react/mdi/folder-outline";
 import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
 import { PanelViewAllButton } from "@/features/shared/components/panel-view-all-button";
 import {
   getTatBadgeTone,
   type OverviewTableRow,
 } from "@/features/overview/config/overview-tables-data";
+import CollectionFillIcon from '@iconify-react/bi/collection-fill';
 
 type OverviewDataTableCardProps = {
   title: string;
@@ -24,11 +24,12 @@ export function OverviewDataTableCard({
       className="overview-table-panel"
       title={title}
       icon={
-        <FolderOutlineIcon
-          height="24"
-          style={{ color: "#ffffff" }}
-          aria-hidden
-        />
+        // <FolderOutlineIcon
+        //   height="24"
+        //   style={{ color: "#ffffff" }}
+        //   aria-hidden
+        // />
+        <CollectionFillIcon height="39" color="white" />
       }
       action={<PanelViewAllButton />}
     >

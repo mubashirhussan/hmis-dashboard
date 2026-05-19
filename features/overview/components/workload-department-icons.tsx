@@ -1,4 +1,4 @@
-import LabIcon from "@iconify-react/icomoon-free/lab";
+// import LabIcon from "@iconify-react/icomoon-free/lab";
 import BloodBankIcon from "@iconify-react/maki/blood-bank";
 import BacteriaOutlineIcon from "@iconify-react/mdi/bacteria-outline";
 import BloodBagIcon from "@iconify-react/mdi/blood-bag";
@@ -6,6 +6,7 @@ import MagnetOnIcon from "@iconify-react/mdi/magnet-on";
 import RadiationIcon from "@iconify-react/mdi/radiation";
 import TestTubeIcon from "@iconify-react/mdi/test-tube";
 import WavesIcon from "@iconify-react/mdi/waves";
+import LabIcon from '@iconify-react/carbon/chemistry';
 import type { ComponentType } from "react";
 import type { WorkloadDepartmentIcon } from "@/features/overview/config/overview-workload-data";
 

@@ -3,6 +3,7 @@ import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
 import { PanelViewAllButton } from "@/features/shared/components/panel-view-all-button";
 import { WorkloadDepartmentCard } from "@/features/overview/components/workload-department-card";
 import { departmentWorkloadItems } from "@/features/overview/config/overview-workload-data";
+import FirstAidIcon from '@iconify-react/bxs/first-aid';
 
 export function DepartmentWorkloadSection() {
   return (
@@ -11,12 +12,7 @@ export function DepartmentWorkloadSection() {
         className="overview-workload-panel"
         title="Department of Workload"
         icon={
-          <MedicalBagIcon
-            height="24"
-            width="24"
-            style={{ color: "#ffffff" }}
-            aria-hidden
-          />
+          <FirstAidIcon height="39" color="white" />
         }
         action={<PanelViewAllButton />}
       >
