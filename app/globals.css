@@ -503,20 +503,35 @@
   flex-shrink: 0;
   align-items: center;
   gap: 6px;
-  border: 1px solid #c5d9f0;
-  border-radius: 8px;
-  background: #ffffff;
-  padding: 8px 14px;
-  font-family: var(--font-roboto-family), Roboto, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  color: #026bb1;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font: inherit;
+  color: inherit;
   cursor: pointer;
 }
 
 .dashboard-panel__action-arrow {
-  font-size: 16px;
+  font-size: 1em;
   line-height: 1;
+}
+
+/* Figma — View All (overview panels) */
+.overview-panel__view-all {
+  box-sizing: border-box;
+  min-height: 30px;
+  border: 1px solid #dfe7ff;
+  border-radius: 6px;
+  background: #f3f7ff;
+  padding: 9px 14px;
+  opacity: 1;
+  font-family: var(--font-roboto-family), Roboto, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 11px;
+  line-height: 100%;
+  letter-spacing: 0.04em;
+  color: #026bb1;
 }
 
 /* Patient distribution */
@@ -706,16 +721,6 @@
   background: #026bb1;
 }
 
-.overview-panel__view-all {
-  border: 1px solid #b8d9f5;
-  border-radius: 10px;
-  background: #e8f3fc;
-  padding: 9px 16px;
-  font-size: 15px;
-  font-weight: 500;
-  color: #026bb1;
-}
-
 .tat-compliance {
   display: flex;
   flex-direction: column;
@@ -727,16 +732,18 @@
 
 .tat-compliance__row {
   display: grid;
-  align-items: center;
+  align-items: baseline;
   gap: 0 20px;
   grid-template-columns: 118px minmax(0, 1fr) 58px;
 }
 
 .tat-compliance__label {
   font-family: var(--font-roboto-family), Roboto, sans-serif;
-  font-size: 16px;
   font-weight: 600;
-  line-height: 1.25;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 100%;
+  letter-spacing: 0.04em;
   color: #526594;
 }
 
@@ -750,11 +757,13 @@
   position: absolute;
   top: 2px;
   transform: translateX(-50%);
-  font-family: var(--font-roboto-family), Roboto, sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 1;
-  color: #a8b5c6;
+  font-family: var(--font-poppins-family), Poppins, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 10px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #7c7c7c;
   white-space: nowrap;
   pointer-events: none;
 }
@@ -774,24 +783,26 @@
 }
 
 .tat-compliance__fill--good {
-  background: #26c281;
+  background: #13C381;
 }
 
 .tat-compliance__fill--warn {
-  background: #f9b115;
+  background: #FDB311;
 }
 
 .tat-compliance__fill--bad {
-  background: #f3435f;
+  background: #FD3762;
 }
 
 .tat-compliance__target {
   justify-self: end;
-  font-family: var(--font-roboto-family), Roboto, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.25;
-  color: #a8b5c6;
+  font-family: var(--font-poppins-family), Poppins, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #7c7c7c;
   white-space: nowrap;
 }
 
@@ -802,11 +813,11 @@
   }
 
   .tat-compliance__label {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .tat-compliance__target {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 

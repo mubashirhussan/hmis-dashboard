@@ -42,7 +42,7 @@ export function PatientDistributionCard() {
       title="Patient Distribution"
       icon={
       
-        <CrmLeadDistributionIcon height="24" color="white" />
+        <CrmLeadDistributionIcon height="39" color="white" />
       }
     >
       <div className="patient-distribution">
@@ -86,7 +86,9 @@ export function PatientDistributionCard() {
           <div className="patient-distribution__center">
             <p className="patient-distribution__center-text">
               <span className="patient-distribution__center-label">
-                Total No of Patients :
+                Total
+                <br />
+                No of Patients :
               </span>{" "}
               <span className="patient-distribution__center-value">
                 {patientDistributionTotal}

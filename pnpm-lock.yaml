@@ -11,6 +11,9 @@ importers:
       '@iconify-react/bi':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
+      '@iconify-react/formkit':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
       '@iconify-react/icomoon-free':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
@@ -27,6 +30,9 @@ importers:
         specifier: ^1.0.15
         version: 1.0.15(react@19.2.4)
       '@iconify-react/mdi':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
+      '@iconify-react/mynaui':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
       '@iconify-react/ri':
@@ -228,6 +234,9 @@ packages:
   '@iconify-react/bi@1.0.2':
     resolution: {integrity: sha512-YWtpk80n/esPA7UA8BlRkKIpzUn6UCens0hgSY9biSI6Np0bqf7+65SpP14UeVQl2bO/Dbq2G9lhvdC8mBZ5GA==}
 
+  '@iconify-react/formkit@1.0.2':
+    resolution: {integrity: sha512-cZ5ao9c+jh+vii5W4rjdTqrDWKn4Oq8VczuMNbIwHCDkSVTKTRAHi2HvoXPDmBgWnFnzuIkkWWnhlrEi8JDGwA==}
+
   '@iconify-react/icomoon-free@1.0.2':
     resolution: {integrity: sha512-JXAu1Gp2RyWHK54r7SaT1zArqtFi8JQy7kJx8aS7GmFCuZr1+lD+BrjIT2Ajm1WsoczAENqCv5CxP2u0ppczbg==}
 
@@ -245,6 +254,9 @@ packages:
 
   '@iconify-react/mdi@1.0.2':
     resolution: {integrity: sha512-p7YgR1oh8523fLQydG6cu53I/de5EkAnsbusQVJSqb6PYmN2MiKO9ovo/RkBV/jQNx+hHRG5VHM1YWpUfJeUFQ==}
+
+  '@iconify-react/mynaui@1.0.2':
+    resolution: {integrity: sha512-yDGEc/MAljI814UIOHTRRLYgojgqhLY5rZc09qiSQkIix62ZCfNDlClHVrqSDNUn+CjjEexNd2aMGTzOhalEZA==}
 
   '@iconify-react/ri@1.0.2':
     resolution: {integrity: sha512-I8UugTKMp5AggweGbaQEUZhfncr0n34sBp5N1RNN6pQUWDVJNMyaBaFrvN+b/xZXAO2y2TOJdWOvb5i8POf91w==}
@@ -2283,6 +2295,12 @@ snapshots:
     transitivePeerDependencies:
       - react
 
+  '@iconify-react/formkit@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
   '@iconify-react/icomoon-free@1.0.2(react@19.2.4)':
     dependencies:
       '@iconify/css-react': 1.0.2(react@19.2.4)
@@ -2314,6 +2332,12 @@ snapshots:
       - react
 
   '@iconify-react/mdi@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/mynaui@1.0.2(react@19.2.4)':
     dependencies:
       '@iconify/css-react': 1.0.2(react@19.2.4)
     transitivePeerDependencies:

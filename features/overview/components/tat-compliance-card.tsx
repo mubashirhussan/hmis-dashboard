@@ -1,6 +1,6 @@
 "use client";
 
-import HexagonOutlineIcon from "@iconify-react/mdi/hexagon-outline";
+import StopHexagonSolidIcon from '@iconify-react/mynaui/stop-hexagon-solid';
 import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
 import { PanelViewAllButton } from "@/features/shared/components/panel-view-all-button";
 import {
@@ -14,11 +14,8 @@ export function TatComplianceCard() {
       className="tat-compliance-panel"
       title="TAT Compliance"
       icon={
-        <HexagonOutlineIcon
-          height="24"
-          style={{ color: "#ffffff" }}
-          aria-hidden
-        />
+       
+        <StopHexagonSolidIcon height="39" color='white' />
       }
       action={<PanelViewAllButton />}
     >
