@@ -34,7 +34,6 @@ export const departmentWorkloadItems: DepartmentWorkloadItem[] = [
     pending: 31,
     tone: "blue",
     icon: "chemistry",
-    highlighted: true,
   },
   {
     id: "hematology",

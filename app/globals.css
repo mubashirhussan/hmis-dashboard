@@ -886,170 +886,200 @@
   }
 }
 
+/* Figma workload card 349×123 — absolute layout scales with card width */
 .workload-dept-card {
   --workload-accent: #026bb1;
-  --workload-accent-soft: #e8f3fc;
-  --workload-accent-muted: #7cb9e8;
+  --workload-accent-soft: #ecf3fe;
 
   position: relative;
+  container-type: inline-size;
   box-sizing: border-box;
-  display: grid;
-  min-height: 101px;
-  align-items: center;
-  grid-template-columns: auto 1fr;
-  gap: 12px;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 349 / 123;
   overflow: hidden;
-  border: 1px solid #e8edf5;
-  border-radius: 12px;
+  border: 1px solid #e3e3e3;
+  border-radius: 14px;
   background: #ffffff;
-  padding: 14px 14px 16px;
-}
-
-.workload-dept-card--highlighted {
-  border-color: #b8d9f5;
-  box-shadow:
-    0 0 0 1px rgb(2 107 177 / 12%),
-    0 8px 24px rgb(2 107 177 / 10%);
+  opacity: 1;
 }
 
 .workload-dept-card--blue {
   --workload-accent: #026bb1;
-  --workload-accent-soft: #e8f3fc;
-  --workload-accent-muted: #7cb9e8;
+  --workload-accent-soft: #ecf3fe;
 }
 
 .workload-dept-card--rose {
   --workload-accent: #f3435f;
   --workload-accent-soft: #fde8ec;
-  --workload-accent-muted: #f9a8b4;
 }
 
 .workload-dept-card--green {
   --workload-accent: #26c281;
   --workload-accent-soft: #e6f7ef;
-  --workload-accent-muted: #86efac;
 }
 
 .workload-dept-card--orange {
   --workload-accent: #f9b115;
   --workload-accent-soft: #fef3e2;
-  --workload-accent-muted: #fcd34d;
 }
 
 .workload-dept-card--pink {
   --workload-accent: #ec4899;
   --workload-accent-soft: #fce7f3;
-  --workload-accent-muted: #f9a8d4;
 }
 
 .workload-dept-card--purple {
   --workload-accent: #8b5cf6;
   --workload-accent-soft: #ede9fe;
-  --workload-accent-muted: #c4b5fd;
 }
 
+/* Icon wrap: 80×80 at left 17px top 21px */
 .workload-dept-card__icon-wrap {
+  position: absolute;
+  top: 17.07%; /* 21/123 */
+  left: 4.87%; /* 17/349 */
+  z-index: 1;
   display: flex;
-  width: 48px;
-  height: 48px;
-  flex-shrink: 0;
+  overflow: hidden;
+  width: 22.92%; /* 80/349 */
+  height: 65.04%; /* 80/123 */
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: 100px;
   background: var(--workload-accent-soft);
   color: var(--workload-accent);
+  opacity: 1;
 }
 
-.workload-dept-card__icon {
-  width: 24px;
-  height: 24px;
+/* Icon: 31.5×36.75 — centered in wrap */
+.workload-dept-card__icon-inner {
+  display: block;
+  width: 39.37%; /* 31.5/80 */
+  height: 45.94%; /* 36.75/80 */
+  flex-shrink: 0;
+  opacity: 1;
 }
 
-.workload-dept-card__body {
-  min-width: 0;
-  padding-right: 72px;
+.workload-dept-card__icon-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
+/* Label — Roboto SemiBold 20px */
 .workload-dept-card__label {
+  position: absolute;
+  top: 17.89%; /* 22/123 */
+  left: 33.81%; /* 118/349 */
+  z-index: 1;
   margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-family: var(--font-roboto-family), Roboto, sans-serif;
-  font-size: 14px;
+  font-size: 5.73cqi; /* 20px @ 349px */
   font-weight: 600;
-  line-height: 1.25;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0.04em;
   color: #526594;
 }
 
+/* Value — Manrope Bold 29px */
 .workload-dept-card__value {
-  margin: 4px 0 0;
+  position: absolute;
+  top: 43.09%; /* 53/123 */
+  left: 33.81%; /* 118/349 */
+  z-index: 1;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-family: var(--font-manrope-family), Manrope, sans-serif;
-  font-size: 28px;
+  font-size: 8.31cqi; /* 29px @ 349px */
   font-weight: 700;
-  line-height: 1;
-  color: #0f172a;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0.04em;
+  color: #000000;
 }
 
+/* Pending: 86×21 at left 255px top 9px */
 .workload-dept-card__pending {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  display: inline-flex;
+  top: 7.32%; /* 9/123 */
+  left: 73.07%; /* 255/349 */
+  z-index: 2;
+  display: flex;
+  /* width: 24.64%;  */
+  height: 17.07%; /* 21/123 */
+  min-width: 86px;
+  min-height: 21px;
   align-items: center;
-  gap: 5px;
-  border-radius: 999px;
+  justify-content: flex-start;
+  gap: 9px;
+  overflow: hidden;
+  border-radius: 100px;
   background: var(--workload-accent-soft);
-  padding: 4px 8px;
+  padding: 0 10px 0 6px;
+  color: var(--workload-accent);
+  opacity: 1;
+}
+
+.workload-dept-card__pending-dot {
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+}
+
+.workload-dept-card__pending-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-family: var(--font-roboto-family), Roboto, sans-serif;
-  font-size: 11px;
+  font-size: 2.87cqi; /* 10px @ 349px */
   font-weight: 500;
   line-height: 1;
-  color: var(--workload-accent);
-  white-space: nowrap;
+  letter-spacing: 0.04em;
 }
 
-.workload-dept-card__dot {
-  width: 6px;
-  height: 6px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  background: var(--workload-accent);
-}
-
+/* Corner accent 38×34 at left 310px top 88px */
 .workload-dept-card__accent {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 64px;
-  height: 64px;
-  background: var(--workload-accent);
-  opacity: 0.12;
-  border-top-left-radius: 100%;
+    top: 72.54%;
+    left: 89.83%;
+  z-index: 0;
+  width: 10.89%; /* 38/349 */
+  height: 27.64%; /* 34/123 */
+  background-color: var(--workload-accent);
+  mask-image: url("/border-bottom.png");
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url("/border-bottom.png");
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
   pointer-events: none;
 }
 
-.workload-dept-card__accent::after {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 36px;
-  height: 36px;
-  background: var(--workload-accent);
-  opacity: 0.22;
-  border-top-left-radius: 100%;
-  content: "";
-}
-
 @container app (max-width: 520px) {
+  .workload-dept-card {
+    aspect-ratio: auto;
+    min-height: 123px;
+  }
+
+  .workload-dept-card__label {
+    font-size: 16px;
+  }
+
   .workload-dept-card__value {
     font-size: 24px;
   }
 
-  .workload-dept-card__body {
-    padding-right: 64px;
-  }
-
-  .workload-dept-card__pending {
+  .workload-dept-card__pending-text {
     font-size: 10px;
-    padding: 3px 7px;
   }
 }
 

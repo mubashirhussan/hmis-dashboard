@@ -13,6 +13,7 @@ export function DepartmentWorkloadSection() {
         icon={
           <MedicalBagIcon
             height="24"
+            width="24"
             style={{ color: "#ffffff" }}
             aria-hidden
           />

@@ -36,5 +36,7 @@ export function WorkloadDepartmentIconView({
 }: WorkloadDepartmentIconViewProps) {
   const IconComponent = workloadDepartmentIconRegistry[icon];
 
-  return <IconComponent className={className} aria-hidden />;
+  return (
+    <IconComponent className={className} width="100%" height="100%" aria-hidden />
+  );
 }
