@@ -226,3 +226,50 @@ export function getSectionTatTone(value: number): "good" | "warn" | "bad" {
   if (value >= 75) return "warn";
   return "bad";
 }
+
+export type LabTestStatusRow = {
+  id: string;
+  test: string;
+  received: number;
+  done: number;
+  tat: number;
+  pending: number;
+};
+
+export const labTestStatusBySection: Record<string, LabTestStatusRow[]> = {
+  chemistry: [
+    { id: "chem-1", test: "Glucose", received: 82, done: 80, tat: 97, pending: 2 },
+    { id: "chem-2", test: "Creatinine", received: 64, done: 62, tat: 96, pending: 2 },
+    { id: "chem-3", test: "Urea", received: 58, done: 55, tat: 78, pending: 3 },
+    { id: "chem-4", test: "Electrolytes", received: 45, done: 44, tat: 98, pending: 1 },
+    { id: "chem-5", test: "Lipid Profile", received: 39, done: 37, tat: 95, pending: 2 },
+  ],
+  hematology: [
+    { id: "hema-1", test: "CBC", received: 57, done: 57, tat: 97, pending: 0 },
+    { id: "hema-2", test: "ESR", received: 49, done: 49, tat: 97, pending: 0 },
+    { id: "hema-3", test: "LFT", received: 44, done: 41, tat: 78, pending: 3 },
+    { id: "hema-4", test: "RFT", received: 38, done: 36, tat: 94, pending: 2 },
+    { id: "hema-5", test: "HB", received: 52, done: 50, tat: 96, pending: 2 },
+  ],
+  microbiology: [
+    { id: "micro-1", test: "Culture", received: 32, done: 28, tat: 88, pending: 4 },
+    { id: "micro-2", test: "Gram Stain", received: 24, done: 23, tat: 96, pending: 1 },
+    { id: "micro-3", test: "AFB", received: 18, done: 15, tat: 82, pending: 3 },
+    { id: "micro-4", test: "Fungal", received: 12, done: 11, tat: 91, pending: 1 },
+    { id: "micro-5", test: "Sensitivity", received: 8, done: 7, tat: 87, pending: 1 },
+  ],
+  immunoassay: [
+    { id: "imm-1", test: "TSH", received: 41, done: 40, tat: 98, pending: 1 },
+    { id: "imm-2", test: "HIV", received: 28, done: 28, tat: 99, pending: 0 },
+    { id: "imm-3", test: "HbsAg", received: 35, done: 33, tat: 94, pending: 2 },
+    { id: "imm-4", test: "Vitamin D", received: 22, done: 20, tat: 76, pending: 2 },
+    { id: "imm-5", test: "PSA", received: 16, done: 15, tat: 93, pending: 1 },
+  ],
+  histopathology: [
+    { id: "histo-1", test: "Biopsy", received: 24, done: 20, tat: 84, pending: 4 },
+    { id: "histo-2", test: "FNAC", received: 18, done: 16, tat: 89, pending: 2 },
+    { id: "histo-3", test: "Pap Smear", received: 14, done: 13, tat: 92, pending: 1 },
+    { id: "histo-4", test: "IHC", received: 8, done: 6, tat: 75, pending: 2 },
+    { id: "histo-5", test: "Special Stain", received: 11, done: 10, tat: 91, pending: 1 },
+  ],
+};

@@ -1,6 +1,7 @@
 "use client";
 
 import { useGetFinanceDashboardQuery } from "@/features/finance/api";
+import { FinanceInsightsSection } from "@/features/finance/components/finance-insights-section";
 import { FeatureDashboardPage } from "@/features/shared/components/feature-dashboard-page";
 import { getDashboardContent } from "@/features/shared/config/dashboard-content";
 
@@ -20,6 +21,8 @@ export function FinanceDashboard() {
           : undefined
       }
       onRetry={refetch}
-    />
+    >
+      <FinanceInsightsSection />
+    </FeatureDashboardPage>
   );
 }
