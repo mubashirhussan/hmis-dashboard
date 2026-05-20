@@ -1806,8 +1806,9 @@
 
 .sample-pipeline__progress-label {
   font-family: var(--font-poppins-family), Poppins, sans-serif;
-  font-size: 17px;
   font-weight: 600;
+  font-style: normal;
+  font-size: 17px;
   line-height: 29px;
   letter-spacing: 0.04em;
   color: #526594;
@@ -1815,8 +1816,9 @@
 
 .sample-pipeline__progress-total {
   font-family: var(--font-poppins-family), Poppins, sans-serif;
-  font-size: 14px;
   font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
   line-height: 100%;
   letter-spacing: 0;
   color: #7c7c7c;
@@ -1836,19 +1838,19 @@
 }
 
 .sample-pipeline__progress-segment--blue {
-  background: #026bb1;
+  background: #1B3994;
 }
 
 .sample-pipeline__progress-segment--purple {
-  background: #8b5cf6;
+  background: #6C4DED;
 }
 
 .sample-pipeline__progress-segment--orange {
-  background: #f9b115;
+  background: #FFA909;
 }
 
 .sample-pipeline__progress-segment--green {
-  background: #26c281;
+  background: #009B67;
 }
 
 /* Laboratory tables — header/row styling matches Corporate Clients (overview-table) */
