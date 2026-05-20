@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@iconify-react/ant-design':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
       '@iconify-react/bi':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
@@ -17,9 +20,15 @@ importers:
       '@iconify-react/carbon':
         specifier: ^1.0.4
         version: 1.0.4(react@19.2.4)
+      '@iconify-react/fluent-mdl2':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
       '@iconify-react/formkit':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
+      '@iconify-react/hugeicons':
+        specifier: ^1.0.7
+        version: 1.0.7(react@19.2.4)
       '@iconify-react/icomoon-free':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
@@ -36,6 +45,9 @@ importers:
         specifier: ^1.0.15
         version: 1.0.15(react@19.2.4)
       '@iconify-react/mdi':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
+      '@iconify-react/mingcute':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
       '@iconify-react/mynaui':
@@ -237,6 +249,9 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
+  '@iconify-react/ant-design@1.0.2':
+    resolution: {integrity: sha512-9zEoM+TaBBhaWff9JXzYzMX2ZClkxjZ/hcsZJDKnmxX2/KB8KI3HT9d1yTux8Jnhhxxs6TVLuu+BU4Fh0byA6w==}
+
   '@iconify-react/bi@1.0.2':
     resolution: {integrity: sha512-YWtpk80n/esPA7UA8BlRkKIpzUn6UCens0hgSY9biSI6Np0bqf7+65SpP14UeVQl2bO/Dbq2G9lhvdC8mBZ5GA==}
 
@@ -246,8 +261,14 @@ packages:
   '@iconify-react/carbon@1.0.4':
     resolution: {integrity: sha512-SDFr9RV6sZXqjAeyNw/JL0aGRrOWtOetCk9q3/BXvRw0MZWSIinQnVpT3FHswTtv38wrJy/YXXI3FWUvC5fHnQ==}
 
+  '@iconify-react/fluent-mdl2@1.0.2':
+    resolution: {integrity: sha512-X7zd2csLKeRGAnJJWQxyS/sxf8qCGBeoTJKybK7hM9MeVpFHp19qW0ox72bitnLd96Z+XcePeDLfp5F4vx3GdA==}
+
   '@iconify-react/formkit@1.0.2':
     resolution: {integrity: sha512-cZ5ao9c+jh+vii5W4rjdTqrDWKn4Oq8VczuMNbIwHCDkSVTKTRAHi2HvoXPDmBgWnFnzuIkkWWnhlrEi8JDGwA==}
+
+  '@iconify-react/hugeicons@1.0.7':
+    resolution: {integrity: sha512-1lXI7ANZ9yxFKj8xJnGhyiUvtZeL+BxcHn4DG819EbLdoP57RP5yni9lq0+ZzPpvZWCFrOVCTHyw9ksTXBbbtg==}
 
   '@iconify-react/icomoon-free@1.0.2':
     resolution: {integrity: sha512-JXAu1Gp2RyWHK54r7SaT1zArqtFi8JQy7kJx8aS7GmFCuZr1+lD+BrjIT2Ajm1WsoczAENqCv5CxP2u0ppczbg==}
@@ -266,6 +287,9 @@ packages:
 
   '@iconify-react/mdi@1.0.2':
     resolution: {integrity: sha512-p7YgR1oh8523fLQydG6cu53I/de5EkAnsbusQVJSqb6PYmN2MiKO9ovo/RkBV/jQNx+hHRG5VHM1YWpUfJeUFQ==}
+
+  '@iconify-react/mingcute@1.0.2':
+    resolution: {integrity: sha512-urtbbGxeZympy0vZF0q5eXjztseuJFOwaRM31uJTuoCFfLwRQqysBVfEgxdKEMmvsQJBPmHgujFJ4u1Fx55ujw==}
 
   '@iconify-react/mynaui@1.0.2':
     resolution: {integrity: sha512-yDGEc/MAljI814UIOHTRRLYgojgqhLY5rZc09qiSQkIix62ZCfNDlClHVrqSDNUn+CjjEexNd2aMGTzOhalEZA==}
@@ -2301,6 +2325,12 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
+  '@iconify-react/ant-design@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
   '@iconify-react/bi@1.0.2(react@19.2.4)':
     dependencies:
       '@iconify/css-react': 1.0.2(react@19.2.4)
@@ -2319,7 +2349,19 @@ snapshots:
     transitivePeerDependencies:
       - react
 
+  '@iconify-react/fluent-mdl2@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
   '@iconify-react/formkit@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/hugeicons@1.0.7(react@19.2.4)':
     dependencies:
       '@iconify/css-react': 1.0.2(react@19.2.4)
     transitivePeerDependencies:
@@ -2356,6 +2398,12 @@ snapshots:
       - react
 
   '@iconify-react/mdi@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/mingcute@1.0.2(react@19.2.4)':
     dependencies:
       '@iconify/css-react': 1.0.2(react@19.2.4)
     transitivePeerDependencies:

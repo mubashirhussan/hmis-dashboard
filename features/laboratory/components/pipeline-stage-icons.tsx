@@ -1,9 +1,10 @@
-import CheckCircleOutlineIcon from "@iconify-react/mdi/check-circle-outline";
-import ClipboardRemoveOutlineIcon from "@iconify-react/mdi/clipboard-remove-outline";
-import ClockOutlineIcon from "@iconify-react/mdi/clock-outline";
-import CogSyncIcon from "@iconify-react/mdi/cog-sync";
-import FileCheckOutlineIcon from "@iconify-react/mdi/file-check-outline";
-import TestTubeIcon from "@iconify-react/mdi/test-tube";
+// import ClipboardRemoveOutlineIcon from "@iconify-react/mdi/clipboard-remove-outline";
+import ProgressIcon from '@iconify-react/hugeicons/progress';
+import CompletedSolidIcon from '@iconify-react/fluent-mdl2/completed-solid';
+import ProcessingIcon from '@iconify-react/fluent-mdl2/processing';
+import TestTubeIcon from '@iconify-react/mingcute/test-tube-line';
+import ReceiptUndeliveredIcon from '@iconify-react/fluent-mdl2/receipt-undelivered';
+import DeliveredProcedureOutlinedIcon from '@iconify-react/ant-design/delivered-procedure-outlined';
 import type { ComponentType } from "react";
 import type { PipelineStageIcon } from "@/features/laboratory/config/laboratory-insights-data";
 
@@ -12,11 +13,11 @@ type IconifyComponent = ComponentType<Record<string, unknown>>;
 export const pipelineStageIconRegistry: Record<PipelineStageIcon, IconifyComponent> =
   {
     collection: TestTubeIcon,
-    received: ClockOutlineIcon,
-    "result-entry": CogSyncIcon,
-    approval: CheckCircleOutlineIcon,
-    undelivered: ClipboardRemoveOutlineIcon,
-    delivered: FileCheckOutlineIcon,
+    received: ProgressIcon,
+    "result-entry": ProcessingIcon,
+    approval: CompletedSolidIcon,
+    undelivered: ReceiptUndeliveredIcon,
+    delivered: DeliveredProcedureOutlinedIcon,
   };
 
 type PipelineStageIconViewProps = {
