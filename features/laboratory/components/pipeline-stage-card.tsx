@@ -17,42 +17,11 @@ const STAGE_COLORS: Record<
   slate: { color: "#919191", bg: "#FCFCFC" },
 };
 
-function CollectionIconGroup() {
-  return (
-    <div className="sample-pipeline__stage-icon-group" data-name="Group">
-      <svg
-        className="absolute block inset-0 size-full"
-        fill="none"
-        preserveAspectRatio="none"
-        viewBox="0 0 17.0833 37.2656"
-        aria-hidden
-      >
-        <path
-          clipRule="evenodd"
-          d={svgPaths.p312ed380}
-          fill="var(--fill-0, white)"
-          fillRule="evenodd"
-        />
-      </svg>
-    </div>
-  );
-}
 
-function CollectionStageIcon() {
-  return (
-    <div
-      className="sample-pipeline__stage-icon-slot"
-      data-name="mingcute:test-tube-line"
-    >
-      <CollectionIconGroup />
-    </div>
-  );
-}
+
 
 function StageIcon({ icon }: { icon: PipelineStage["icon"] }) {
-  if (icon === "collection") {
-    return <CollectionStageIcon />;
-  }
+ 
 
   return (
     <div className="sample-pipeline__stage-icon-slot">

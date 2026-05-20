@@ -1719,15 +1719,20 @@
 .sample-pipeline__stage-label {
   position: absolute;
   top: 9.09%; /* 15px @ 165px */
-  left: 11.89cqi; /* 17px @ 143px */
+  right: 0;
+  left: 0;
   z-index: 2;
-  width: 74.83cqi; /* 107px */
+  box-sizing: border-box;
+  width: 100%;
   margin: 0;
+  padding: 0 6px;
   font-family: var(--font-roboto-family), Roboto, sans-serif;
   font-weight: 600;
   font-size: max(12px, calc(12 * 100cqi / 143));
   line-height: 100%;
   letter-spacing: 0.04em;
+  text-align: center;
+  white-space: nowrap;
   color: var(--stage-color);
 }
 
