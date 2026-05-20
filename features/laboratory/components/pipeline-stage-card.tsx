@@ -9,12 +9,12 @@ const STAGE_COLORS: Record<
   PipelineStage["tone"],
   { color: string; bg: string }
 > = {
-  blue: { color: "#026bb1", bg: "#f4f8fe" },
-  purple: { color: "#7b61ff", bg: "#f3f0ff" },
-  orange: { color: "#f9b115", bg: "#fff8e8" },
-  green: { color: "#26c281", bg: "#e8f9f0" },
-  rose: { color: "#f3435f", bg: "#fef0f2" },
-  slate: { color: "#94a3b8", bg: "#f4f6f8" },
+  blue: { color: "#026BB1", bg: "#F4F8FE" },
+  purple: { color: "#6D4FEC", bg: "#F8F6FD" },
+  orange: { color: "#FAA202", bg: "#FEFBF7" },
+  green: { color: "#019965", bg: "#F5FAF8" },
+  rose: { color: "#FF2F61", bg: "#FEF2F3" },
+  slate: { color: "#919191", bg: "#FCFCFC" },
 };
 
 function CollectionIconGroup() {
