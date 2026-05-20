@@ -5,6 +5,7 @@ import {
   type DashboardTableColumn,
 } from "@/features/shared/components/dashboard-data-table";
 import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
+import CollectionFillIcon from "@iconify-react/bi/collection-fill";
 
 const INVENTORY_COLUMNS: DashboardTableColumn[] = [
   { key: "requestId", label: "ID" },
@@ -21,12 +22,7 @@ export function InventoryManagementSection() {
       className="blood-bank-panel"
       title="Inventory, cross-matching, donor management"
       icon={
-        <FolderOutlineIcon
-          height="24"
-          width="24"
-          style={{ color: "#ffffff" }}
-          aria-hidden
-        />
+        <CollectionFillIcon height="39" color="white" />
       }
     >
       <DashboardDataTable

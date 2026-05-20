@@ -1,6 +1,6 @@
-import HexagonOutlineIcon from "@iconify-react/mdi/hexagon-outline";
 import { paymentModeRows } from "@/features/finance/config/finance-insights-data";
 import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
+import StopHexagonSolidIcon from '@iconify-react/mynaui/stop-hexagon-solid';
 
 export function PaymentModesSection() {
   return (
@@ -8,11 +8,9 @@ export function PaymentModesSection() {
       className="finance-panel finance-panel--payment"
       title="Payment Modes"
       icon={
-        <HexagonOutlineIcon
-          height="24"
-          width="24"
-          style={{ color: "#ffffff" }}
-          aria-hidden
+         <StopHexagonSolidIcon
+          height="39"
+         color="white"
         />
       }
     >

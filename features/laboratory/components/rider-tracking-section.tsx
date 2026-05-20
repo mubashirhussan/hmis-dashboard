@@ -1,4 +1,5 @@
-import FolderOutlineIcon from "@iconify-react/mdi/folder-outline";
+import CollectionFillIcon from "@iconify-react/bi/collection-fill";
+
 import { riderTrackingRows } from "@/features/laboratory/config/laboratory-insights-data";
 import {
   DashboardDataTable,
@@ -20,12 +21,7 @@ export function RiderTrackingSection() {
       className="lab-panel"
       title="Rider Tracking"
       icon={
-        <FolderOutlineIcon
-          height="24"
-          width="24"
-          style={{ color: "#ffffff" }}
-          aria-hidden
-        />
+       <CollectionFillIcon height="39" color="white" />
       }
     >
       <DashboardDataTable

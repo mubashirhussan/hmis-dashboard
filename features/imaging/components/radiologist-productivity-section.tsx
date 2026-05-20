@@ -5,6 +5,7 @@ import {
 } from "@/features/imaging/config/imaging-insights-data";
 import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
 import { PanelViewAllButton } from "@/features/shared/components/panel-view-all-button";
+import StopHexagonSolidIcon from '@iconify-react/mynaui/stop-hexagon-solid';
 
 export function RadiologistProductivitySection() {
   return (
@@ -12,11 +13,11 @@ export function RadiologistProductivitySection() {
       className="imaging-panel imaging-productivity-panel"
       title="Radiologist Productivity"
       icon={
-        <HexagonOutlineIcon
-          height="24"
-          width="24"
-          style={{ color: "#ffffff" }}
-          aria-hidden
+        <StopHexagonSolidIcon
+          height="39"
+          color="white"
+          
+         
         />
       }
       action={<PanelViewAllButton />}

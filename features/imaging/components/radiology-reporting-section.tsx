@@ -1,4 +1,4 @@
-import ImageFilterCenterFocusIcon from "@iconify-react/mdi/image-filter-center-focus";
+import BreakdowntimerIcon from '@iconify-react/arcticons/breakdowntimer';
 import { ImagingDataTable } from "@/features/imaging/components/imaging-data-table";
 import { radiologyReportingRows } from "@/features/imaging/config/imaging-insights-data";
 import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
@@ -17,12 +17,7 @@ export function RadiologyReportingSection() {
       className="imaging-panel"
       title="Radiology Reporting"
       icon={
-        <ImageFilterCenterFocusIcon
-          height="24"
-          width="24"
-          style={{ color: "#ffffff" }}
-          aria-hidden
-        />
+       <BreakdowntimerIcon height="39" color="white" />
       }
     >
       <ImagingDataTable

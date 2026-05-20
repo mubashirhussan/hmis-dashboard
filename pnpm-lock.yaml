@@ -11,6 +11,9 @@ importers:
       '@iconify-react/ant-design':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
+      '@iconify-react/arcticons':
+        specifier: ^1.0.6
+        version: 1.0.6(react@19.2.4)
       '@iconify-react/bi':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
@@ -26,6 +29,9 @@ importers:
       '@iconify-react/formkit':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
+      '@iconify-react/game-icons':
+        specifier: ^1.0.3
+        version: 1.0.3(react@19.2.4)
       '@iconify-react/hugeicons':
         specifier: ^1.0.7
         version: 1.0.7(react@19.2.4)
@@ -45,6 +51,9 @@ importers:
         specifier: ^1.0.15
         version: 1.0.15(react@19.2.4)
       '@iconify-react/mdi':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
+      '@iconify-react/medical-icon':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
       '@iconify-react/mingcute':
@@ -252,6 +261,9 @@ packages:
   '@iconify-react/ant-design@1.0.2':
     resolution: {integrity: sha512-9zEoM+TaBBhaWff9JXzYzMX2ZClkxjZ/hcsZJDKnmxX2/KB8KI3HT9d1yTux8Jnhhxxs6TVLuu+BU4Fh0byA6w==}
 
+  '@iconify-react/arcticons@1.0.6':
+    resolution: {integrity: sha512-IyFM6keY5gZb8PhYfYwq7DJUFFVV3nYumUN3BEufGa+UCw1JvhRqacNo6uh3HP8xavii7QN4PNuI0FOF0HRjmg==}
+
   '@iconify-react/bi@1.0.2':
     resolution: {integrity: sha512-YWtpk80n/esPA7UA8BlRkKIpzUn6UCens0hgSY9biSI6Np0bqf7+65SpP14UeVQl2bO/Dbq2G9lhvdC8mBZ5GA==}
 
@@ -266,6 +278,9 @@ packages:
 
   '@iconify-react/formkit@1.0.2':
     resolution: {integrity: sha512-cZ5ao9c+jh+vii5W4rjdTqrDWKn4Oq8VczuMNbIwHCDkSVTKTRAHi2HvoXPDmBgWnFnzuIkkWWnhlrEi8JDGwA==}
+
+  '@iconify-react/game-icons@1.0.3':
+    resolution: {integrity: sha512-Xy5KKYawM2ViuylVtCiu2v6K6MUIlVS6o4WPrNTJDZyS3c5XJ7JJs++OoIFpxLA9LmIbZXCKbLgHr+maswoohg==}
 
   '@iconify-react/hugeicons@1.0.7':
     resolution: {integrity: sha512-1lXI7ANZ9yxFKj8xJnGhyiUvtZeL+BxcHn4DG819EbLdoP57RP5yni9lq0+ZzPpvZWCFrOVCTHyw9ksTXBbbtg==}
@@ -287,6 +302,9 @@ packages:
 
   '@iconify-react/mdi@1.0.2':
     resolution: {integrity: sha512-p7YgR1oh8523fLQydG6cu53I/de5EkAnsbusQVJSqb6PYmN2MiKO9ovo/RkBV/jQNx+hHRG5VHM1YWpUfJeUFQ==}
+
+  '@iconify-react/medical-icon@1.0.2':
+    resolution: {integrity: sha512-HqgH/o2GIqNU5EJh9MEoOMPi9MvKjTh4k7qwBXZHW3EiAjJlI7DCQ3csPx1H2OSDU8Rrl7x1C/2Vix4zAjZ3+g==}
 
   '@iconify-react/mingcute@1.0.2':
     resolution: {integrity: sha512-urtbbGxeZympy0vZF0q5eXjztseuJFOwaRM31uJTuoCFfLwRQqysBVfEgxdKEMmvsQJBPmHgujFJ4u1Fx55ujw==}
@@ -2331,6 +2349,12 @@ snapshots:
     transitivePeerDependencies:
       - react
 
+  '@iconify-react/arcticons@1.0.6(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
   '@iconify-react/bi@1.0.2(react@19.2.4)':
     dependencies:
       '@iconify/css-react': 1.0.2(react@19.2.4)
@@ -2356,6 +2380,12 @@ snapshots:
       - react
 
   '@iconify-react/formkit@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/game-icons@1.0.3(react@19.2.4)':
     dependencies:
       '@iconify/css-react': 1.0.2(react@19.2.4)
     transitivePeerDependencies:
@@ -2398,6 +2428,12 @@ snapshots:
       - react
 
   '@iconify-react/mdi@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/medical-icon@1.0.2(react@19.2.4)':
     dependencies:
       '@iconify/css-react': 1.0.2(react@19.2.4)
     transitivePeerDependencies:

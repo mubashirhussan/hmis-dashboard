@@ -7,6 +7,7 @@ import {
   type RevenueDeptSegment,
 } from "@/features/finance/config/finance-insights-data";
 import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
+import StopHexagonSolidIcon from '@iconify-react/mynaui/stop-hexagon-solid';
 
 const CHART_W = 300;
 const CHART_H = 155;
@@ -43,11 +44,9 @@ export function RevenueByDeptSection() {
       className="finance-panel finance-panel--dept"
       title="Revenue by Dept"
       icon={
-        <HexagonOutlineIcon
-          height="24"
-          width="24"
-          style={{ color: "#ffffff" }}
-          aria-hidden
+        <StopHexagonSolidIcon
+          height="39"
+         color="white"
         />
       }
     >

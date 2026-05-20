@@ -6,6 +6,7 @@ import {
 } from "@/features/shared/components/dashboard-data-table";
 import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
 import { PanelViewAllButton } from "@/features/shared/components/panel-view-all-button";
+import ICareStaffAreaIcon from '@iconify-react/medical-icon/i-care-staff-area';
 
 const STATUS_COLUMNS: DashboardTableColumn[] = [
   { key: "requestTime", label: "Request Time" },
@@ -21,11 +22,9 @@ export function StatusSection() {
       className="hs-panel hs-panel--status"
       title="Status"
       icon={
-        <HomeHealthIcon
-          height="24"
-          width="24"
-          style={{ color: "#ffffff" }}
-          aria-hidden
+        <ICareStaffAreaIcon
+          height="39"
+          color="white"
         />
       }
       action={<PanelViewAllButton />}

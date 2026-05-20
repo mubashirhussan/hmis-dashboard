@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import FolderOutlineIcon from "@iconify-react/mdi/folder-outline";
+import CollectionFillIcon from "@iconify-react/bi/collection-fill";
+
 import { LabTestStatusModal } from "@/features/laboratory/components/lab-test-status-modal";
 import {
   getSectionTatTone,
@@ -37,12 +38,7 @@ export function SectionWorkloadSection() {
         className="lab-panel"
         title="Section Workload"
         icon={
-          <FolderOutlineIcon
-            height="24"
-            width="24"
-            style={{ color: "#ffffff" }}
-            aria-hidden
-          />
+         <CollectionFillIcon height="39" color="white" />
         }
       >
         <DashboardDataTable

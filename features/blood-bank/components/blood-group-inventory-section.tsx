@@ -6,6 +6,7 @@ import {
   bloodGroupInventorySummary,
 } from "@/features/blood-bank/config/blood-group-inventory-data";
 import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
+import BloodIcon from '@iconify-react/hugeicons/blood';
 
 export function BloodGroupInventorySection() {
   return (
@@ -13,7 +14,7 @@ export function BloodGroupInventorySection() {
       <DashboardPanel
         className="blood-bank-panel blood-group-inventory-panel"
         title="Blood Group Inventory"
-        icon={<BloodGroupPanelIcon />}
+        icon={<BloodIcon height="39" color="white" />}
       >
         <ul className="blood-group-inventory__grid">
           {bloodGroupInventoryItems.map((item) => (

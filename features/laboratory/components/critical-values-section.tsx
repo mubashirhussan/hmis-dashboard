@@ -1,4 +1,5 @@
-import FolderOutlineIcon from "@iconify-react/mdi/folder-outline";
+import CollectionFillIcon from "@iconify-react/bi/collection-fill";
+
 import { criticalValueRows } from "@/features/laboratory/config/laboratory-insights-data";
 import {
   DashboardDataTable,
@@ -21,12 +22,7 @@ export function CriticalValuesSection() {
       className="lab-panel"
       title="Critical Values"
       icon={
-        <FolderOutlineIcon
-          height="24"
-          width="24"
-          style={{ color: "#ffffff" }}
-          aria-hidden
-        />
+        <CollectionFillIcon height="39" color="white" />
       }
     >
       <DashboardDataTable

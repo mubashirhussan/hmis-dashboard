@@ -8,6 +8,7 @@ import {
   revenueOverviewYLabels,
   revenueOverviewYLogPositions,
 } from "@/features/finance/config/finance-insights-data";
+import CashIcon from '@iconify-react/game-icons/cash';
 import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
 
 const CHART_WIDTH = 580;
@@ -68,11 +69,8 @@ export function RevenueOverviewSection() {
       className="finance-panel finance-panel--overview"
       title="Revenue Overview"
       icon={
-        <FinanceModeRoundedIcon
-          height="24"
-          width="24"
-          style={{ color: "#ffffff" }}
-          aria-hidden
+        <CashIcon
+          color="white" height="39"
         />
       }
     >

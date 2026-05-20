@@ -3,6 +3,7 @@ import RadiationIcon from "@iconify-react/mdi/radiation";
 import TimerIcon from "@iconify-react/material-symbols-light/timer";
 import { upcomingVisits } from "@/features/home-services/config/home-services-insights-data";
 import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
+import EventsIcon from '@iconify-react/mdi/events';
 
 export function UpcomingVisitsSection() {
   return (
@@ -10,11 +11,9 @@ export function UpcomingVisitsSection() {
       className="hs-panel hs-panel--visits"
       title="Upcoming Visits"
       icon={
-        <CalendarEventIcon
-          height="24"
-          width="24"
-          style={{ color: "#ffffff" }}
-          aria-hidden
+        <EventsIcon
+          height="39" color="white"
+        
         />
       }
     >
