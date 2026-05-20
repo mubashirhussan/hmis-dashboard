@@ -4,7 +4,7 @@ import { modalityBreakdownRows } from "@/features/imaging/config/imaging-insight
 import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
 
 const MODALITY_COLUMNS = [
-  { key: "modality", label: "Modality", align: "left" as const },
+  { key: "modality", label: "Modality" },
   { key: "active", label: "Active" },
   { key: "done", label: "Done" },
   { key: "pending", label: "Pending" },

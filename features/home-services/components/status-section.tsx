@@ -1,7 +1,19 @@
 import HomeHealthIcon from "@iconify-react/material-symbols-light/home-health";
 import { homeServiceStatusRows } from "@/features/home-services/config/home-services-insights-data";
+import {
+  DashboardDataTable,
+  type DashboardTableColumn,
+} from "@/features/shared/components/dashboard-data-table";
 import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
 import { PanelViewAllButton } from "@/features/shared/components/panel-view-all-button";
+
+const STATUS_COLUMNS: DashboardTableColumn[] = [
+  { key: "requestTime", label: "Request Time" },
+  { key: "riderName", label: "Rider Name" },
+  { key: "responseTime", label: "Response Time" },
+  { key: "deliveryTime", label: "Delivery Time" },
+  { key: "status", label: "Status" },
+];
 
 export function StatusSection() {
   return (
@@ -18,40 +30,26 @@ export function StatusSection() {
       }
       action={<PanelViewAllButton />}
     >
-      <div className="lab-table-scroll">
-        <table className="lab-data-table hs-status-table">
-          <thead>
-            <tr>
-              <th scope="col">Request Time</th>
-              <th scope="col" className="lab-data-table__th--left">
-                Rider Name
-              </th>
-              <th scope="col">Response Time</th>
-              <th scope="col">Delivery Time</th>
-              <th scope="col">Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            {homeServiceStatusRows.map((row) => (
-              <tr key={row.id}>
-                <td className="lab-data-table__td--strong">{row.requestTime}</td>
-                <td className="lab-data-table__td--left lab-data-table__td--strong">
-                  {row.riderName}
-                </td>
-                <td>{row.responseTime}</td>
-                <td className="hs-status-table__delivery">{row.deliveryTime}</td>
-                <td>
-                  <span
-                    className={`hs-status-badge hs-status-badge--${row.status}`}
-                  >
-                    {row.status === "delayed" ? "Delayed" : "In time"}
-                  </span>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      <DashboardDataTable
+        ariaLabel="Home service status"
+        columns={STATUS_COLUMNS}
+        rows={homeServiceStatusRows.map((row) => ({
+          id: row.id,
+          requestTime: row.requestTime,
+          riderName: row.riderName,
+          responseTime: row.responseTime,
+          deliveryTime: (
+            <span className="hs-status-table__delivery">{row.deliveryTime}</span>
+          ),
+          status: (
+            <span
+              className={`hs-status-badge hs-status-badge--${row.status}`}
+            >
+              {row.status === "delayed" ? "Delayed" : "In time"}
+            </span>
+          ),
+        }))}
+      />
     </DashboardPanel>
   );
 }

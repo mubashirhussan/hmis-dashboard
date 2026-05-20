@@ -9,7 +9,19 @@ import {
   sectionWorkloadRows,
   type SectionWorkloadRow,
 } from "@/features/laboratory/config/laboratory-insights-data";
+import {
+  DashboardDataTable,
+  type DashboardTableColumn,
+} from "@/features/shared/components/dashboard-data-table";
 import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
+
+const SECTION_WORKLOAD_COLUMNS: DashboardTableColumn[] = [
+  { key: "section", label: "Section" },
+  { key: "received", label: "Received" },
+  { key: "done", label: "Done" },
+  { key: "pending", label: "Pending" },
+  { key: "tat", label: "TAT", cellType: "tat" },
+];
 
 export function SectionWorkloadSection() {
   const [selectedSection, setSelectedSection] =
@@ -33,48 +45,36 @@ export function SectionWorkloadSection() {
           />
         }
       >
-        <div className="lab-table-scroll">
-          <table className="lab-data-table lab-section-workload-table">
-            <thead>
-              <tr>
-                <th scope="col" className="lab-data-table__th--left">
-                  Section
-                </th>
-                <th scope="col">Received</th>
-                <th scope="col">Done</th>
-                <th scope="col">Pending</th>
-                <th scope="col">TAT</th>
-              </tr>
-            </thead>
-            <tbody>
-              {sectionWorkloadRows.map((row) => {
-                const tone = getSectionTatTone(row.tat);
+        <DashboardDataTable
+          ariaLabel="Section workload"
+          columns={SECTION_WORKLOAD_COLUMNS}
+          rows={sectionWorkloadRows.map((row) => {
+            const tone = getSectionTatTone(row.tat);
 
-                return (
-                  <tr key={row.id}>
-                    <td className="lab-data-table__td--left">
-                      <button
-                        type="button"
-                        className="lab-section-workload-table__row-btn"
-                        onClick={() => setSelectedSection(row)}
-                      >
-                        {row.section}
-                      </button>
-                    </td>
-                    <td>{row.received}</td>
-                    <td>{row.done}</td>
-                    <td>{row.pending}</td>
-                    <td>
-                      <span className={`lab-tat-ring lab-tat-ring--${tone}`}>
-                        {row.tat}%
-                      </span>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
+            return {
+              id: row.id,
+              section: (
+                <button
+                  type="button"
+                  className="dashboard-table__row-btn"
+                  onClick={() => setSelectedSection(row)}
+                >
+                  {row.section}
+                </button>
+              ),
+              received: row.received,
+              done: row.done,
+              pending: row.pending,
+              tat: (
+                <span
+                  className={`overview-table__tat overview-table__tat--${tone}`}
+                >
+                  {row.tat}%
+                </span>
+              ),
+            };
+          })}
+        />
       </DashboardPanel>
 
       {selectedSection ? (

@@ -8,6 +8,18 @@ import {
   type LabTestStatusRow,
   type SectionWorkloadRow,
 } from "@/features/laboratory/config/laboratory-insights-data";
+import {
+  DashboardDataTable,
+  type DashboardTableColumn,
+} from "@/features/shared/components/dashboard-data-table";
+
+const LAB_TEST_STATUS_COLUMNS: DashboardTableColumn[] = [
+  { key: "test", label: "Section" },
+  { key: "received", label: "Received" },
+  { key: "done", label: "Done" },
+  { key: "tat", label: "TAT", cellType: "tat" },
+  { key: "pending", label: "Pending", cellType: "pending" },
+];
 
 type LabTestStatusModalProps = {
   section: SectionWorkloadRow;
@@ -77,44 +89,28 @@ export function LabTestStatusModal({
         </header>
 
         <div className="lab-modal__table-wrap">
-          <table className="lab-modal-table">
-            <thead>
-              <tr>
-                <th scope="col" className="lab-modal-table__th--left">
-                  Section
-                </th>
-                <th scope="col">Received</th>
-                <th scope="col">Done</th>
-                <th scope="col">TAT</th>
-                <th scope="col">Pending</th>
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map((row) => {
-                const tone = getSectionTatTone(row.tat);
+          <DashboardDataTable
+            ariaLabel={`Lab test status for ${section.section}`}
+            columns={LAB_TEST_STATUS_COLUMNS}
+            rows={rows.map((row) => {
+              const tone = getSectionTatTone(row.tat);
 
-                return (
-                  <tr key={row.id}>
-                    <td className="lab-modal-table__td--left lab-modal-table__td--strong">
-                      {row.test}
-                    </td>
-                    <td>{row.received}</td>
-                    <td>{row.done}</td>
-                    <td>
-                      <span
-                        className={`lab-test-tat-badge lab-test-tat-badge--${tone}`}
-                      >
-                        {row.tat}%
-                      </span>
-                    </td>
-                    <td className="lab-modal-table__td--pending">
-                      {row.pending}
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+              return {
+                id: row.id,
+                test: row.test,
+                received: row.received,
+                done: row.done,
+                tat: (
+                  <span
+                    className={`overview-table__tat overview-table__tat--${tone}`}
+                  >
+                    {row.tat}%
+                  </span>
+                ),
+                pending: row.pending,
+              };
+            })}
+          />
         </div>
       </div>
     </div>

@@ -1,6 +1,18 @@
 import FolderOutlineIcon from "@iconify-react/mdi/folder-outline";
 import { riderTrackingRows } from "@/features/laboratory/config/laboratory-insights-data";
+import {
+  DashboardDataTable,
+  type DashboardTableColumn,
+} from "@/features/shared/components/dashboard-data-table";
 import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
+
+const RIDER_TRACKING_COLUMNS: DashboardTableColumn[] = [
+  { key: "riderName", label: "Rider Name" },
+  { key: "location", label: "Location" },
+  { key: "arrivalTime", label: "Arrival Time" },
+  { key: "exitTime", label: "Exit Time" },
+  { key: "quantity", label: "Quantity" },
+];
 
 export function RiderTrackingSection() {
   return (
@@ -16,36 +28,18 @@ export function RiderTrackingSection() {
         />
       }
     >
-      <div className="lab-table-scroll">
-        <table className="lab-data-table">
-          <thead>
-            <tr>
-              <th scope="col" className="lab-data-table__th--left">
-                Rider Name
-              </th>
-              <th scope="col" className="lab-data-table__th--left">
-                Location
-              </th>
-              <th scope="col">Arrival Time</th>
-              <th scope="col">Exit Time</th>
-              <th scope="col">Quantity</th>
-            </tr>
-          </thead>
-          <tbody>
-            {riderTrackingRows.map((row) => (
-              <tr key={row.id}>
-                <td className="lab-data-table__td--left lab-data-table__td--strong">
-                  {row.riderName}
-                </td>
-                <td className="lab-data-table__td--left">{row.location}</td>
-                <td>{row.arrivalTime}</td>
-                <td>{row.exitTime}</td>
-                <td>{row.quantity}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      <DashboardDataTable
+        ariaLabel="Rider tracking"
+        columns={RIDER_TRACKING_COLUMNS}
+        rows={riderTrackingRows.map((row) => ({
+          id: row.id,
+          riderName: row.riderName,
+          location: row.location,
+          arrivalTime: row.arrivalTime,
+          exitTime: row.exitTime,
+          quantity: row.quantity,
+        }))}
+      />
     </DashboardPanel>
   );
 }

@@ -1,6 +1,19 @@
 import FolderOutlineIcon from "@iconify-react/mdi/folder-outline";
 import { bloodBankInventoryRows } from "@/features/blood-bank/config/blood-bank-insights-data";
+import {
+  DashboardDataTable,
+  type DashboardTableColumn,
+} from "@/features/shared/components/dashboard-data-table";
 import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
+
+const INVENTORY_COLUMNS: DashboardTableColumn[] = [
+  { key: "requestId", label: "ID" },
+  { key: "patient", label: "Patient" },
+  { key: "units", label: "Units" },
+  { key: "group", label: "Group" },
+  { key: "time", label: "Time" },
+  { key: "status", label: "Status" },
+];
 
 export function InventoryManagementSection() {
   return (
@@ -16,42 +29,26 @@ export function InventoryManagementSection() {
         />
       }
     >
-      <div className="lab-table-scroll">
-        <table className="lab-data-table blood-bank-table">
-          <thead>
-            <tr>
-              <th scope="col">ID</th>
-              <th scope="col" className="lab-data-table__th--left">
-                Patient
-              </th>
-              <th scope="col">Units</th>
-              <th scope="col">Group</th>
-              <th scope="col">Time</th>
-              <th scope="col">Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            {bloodBankInventoryRows.map((row) => (
-              <tr key={row.id}>
-                <td className="lab-data-table__td--strong">{row.requestId}</td>
-                <td className="lab-data-table__td--left">{row.patient}</td>
-                <td>{row.units}</td>
-                <td>
-                  <span className="blood-group-badge">{row.group}</span>
-                </td>
-                <td>{row.time}</td>
-                <td>
-                  <span
-                    className={`lab-status-badge lab-status-badge--${row.status}`}
-                  >
-                    {row.status === "processing" ? "Processing" : "Completed"}
-                  </span>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      <DashboardDataTable
+        ariaLabel="Blood bank inventory"
+        columnCount={6}
+        columns={INVENTORY_COLUMNS}
+        rows={bloodBankInventoryRows.map((row) => ({
+          id: row.id,
+          requestId: row.requestId,
+          patient: row.patient,
+          units: row.units,
+          group: <span className="blood-group-badge">{row.group}</span>,
+          time: row.time,
+          status: (
+            <span
+              className={`lab-status-badge lab-status-badge--${row.status}`}
+            >
+              {row.status === "processing" ? "Processing" : "Completed"}
+            </span>
+          ),
+        }))}
+      />
     </DashboardPanel>
   );
 }

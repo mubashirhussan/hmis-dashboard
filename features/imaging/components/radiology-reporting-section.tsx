@@ -4,7 +4,7 @@ import { radiologyReportingRows } from "@/features/imaging/config/imaging-insigh
 import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
 
 const REPORTING_COLUMNS = [
-  { key: "test", label: "Test", align: "left" as const },
+  { key: "test", label: "Test" },
   { key: "done", label: "Done" },
   { key: "performed", label: "Performed" },
   { key: "tat", label: "TAT" },

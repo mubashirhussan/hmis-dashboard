@@ -52,9 +52,7 @@ export function OverviewDataTableCard({
     >
       <div className="overview-table" role="region" aria-label={title}>
         <div className="overview-table__header" role="row">
-          <span className="overview-table__cell overview-table__cell--name">
-            {nameColumnLabel}
-          </span>
+          <span className="overview-table__cell">{nameColumnLabel}</span>
           <span className="overview-table__cell">Samples</span>
           <span className="overview-table__cell overview-table__cell--tat">
             TAT

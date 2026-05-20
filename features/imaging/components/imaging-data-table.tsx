@@ -4,7 +4,6 @@ import { getImagingTatTone } from "@/features/imaging/config/imaging-insights-da
 type ImagingTableColumn = {
   key: string;
   label: string;
-  align?: "left" | "center";
 };
 
 type ImagingDataTableProps = {
@@ -19,25 +18,19 @@ function joinClasses(...classes: Array<string | false | undefined>) {
 }
 
 export function ImagingDataTable({
-  variant,
   columns,
   rows,
   ariaLabel,
 }: ImagingDataTableProps) {
   return (
-    <div
-      className={joinClasses("imaging-table", `imaging-table--${variant}`)}
-      role="region"
-      aria-label={ariaLabel}
-    >
-      <div className="imaging-table__header" role="row">
+    <div className="overview-table" role="region" aria-label={ariaLabel}>
+      <div className="overview-table__header" role="row">
         {columns.map((column) => (
           <span
             key={column.key}
             className={joinClasses(
-              "imaging-table__cell",
-              column.align === "left" && "imaging-table__cell--name",
-              column.key === "tat" && "imaging-table__cell--tat",
+              "overview-table__cell",
+              column.key === "tat" && "overview-table__cell--tat",
             )}
           >
             {column.label}
@@ -45,10 +38,10 @@ export function ImagingDataTable({
         ))}
       </div>
 
-      <ul className="imaging-table__body">
+      <ul className="overview-table__body">
         {rows.map((row) => (
-          <li key={String(row.id)} className="imaging-table__row" role="row">
-            {columns.map((column) => {
+          <li key={String(row.id)} className="overview-table__row" role="row">
+            {columns.map((column, columnIndex) => {
               const value = row[column.key];
 
               if (column.key === "tat" && typeof value === "number") {
@@ -57,10 +50,10 @@ export function ImagingDataTable({
                 return (
                   <span
                     key={column.key}
-                    className="imaging-table__cell imaging-table__cell--tat"
+                    className="overview-table__cell overview-table__cell--tat"
                   >
                     <span
-                      className={`imaging-table__tat imaging-table__tat--${tone}`}
+                      className={`overview-table__tat overview-table__tat--${tone}`}
                     >
                       {value}%
                     </span>
@@ -72,13 +65,13 @@ export function ImagingDataTable({
                 <span
                   key={column.key}
                   className={joinClasses(
-                    "imaging-table__cell",
-                    column.align === "left" && "imaging-table__cell--name",
-                    column.key === "active" && "imaging-table__cell--active",
-                    column.key === "done" && "imaging-table__cell--done",
-                    column.key === "pending" && "imaging-table__cell--pending",
+                    "overview-table__cell",
+                    columnIndex === 0 && "overview-table__cell--name",
+                    column.key === "active" && "overview-table__cell--active",
+                    column.key === "done" && "overview-table__cell--done",
+                    column.key === "pending" && "overview-table__cell--pending",
                     column.key === "performed" &&
-                      "imaging-table__cell--performed",
+                      "overview-table__cell--performed",
                   )}
                 >
                   {value}
