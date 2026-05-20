@@ -11,9 +11,10 @@ import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
 import { PipelineConnector } from "@/features/laboratory/components/pipeline-connector";
 import { PanelViewAllButton } from "@/features/shared/components/panel-view-all-button";
 
+const PIPELINE_PROGRESS_FILL_PERCENT = 75;
+
 export function SamplePipelineSection() {
   const progressStages = samplePipelineStages.filter((stage) => stage.inProgress);
-  const progressTotal = progressStages.reduce((sum, stage) => sum + stage.value, 0);
 
   return (
     <DashboardPanel
@@ -55,20 +56,23 @@ export function SamplePipelineSection() {
           <div
             className="sample-pipeline__progress-bar"
             role="progressbar"
-            aria-valuenow={progressTotal}
+            aria-valuenow={PIPELINE_PROGRESS_FILL_PERCENT}
             aria-valuemin={0}
-            aria-valuemax={progressTotal}
+            aria-valuemax={100}
             aria-label="Pipeline progress"
           >
-            {progressStages.map((stage) => (
-              <span
-                key={stage.id}
-                className={`sample-pipeline__progress-segment sample-pipeline__progress-segment--${stage.tone}`}
-                style={{
-                  width: `${(stage.value / progressTotal) * 100}%`,
-                }}
-              />
-            ))}
+            <div
+              className="sample-pipeline__progress-fill"
+              style={{ width: `${PIPELINE_PROGRESS_FILL_PERCENT}%` }}
+            >
+              {progressStages.map((stage) => (
+                <div
+                  key={stage.id}
+                  className={`sample-pipeline__progress-segment sample-pipeline__progress-segment--${stage.tone}`}
+                  style={{ flexGrow: stage.value, flexBasis: 0 }}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
