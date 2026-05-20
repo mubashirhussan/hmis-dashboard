@@ -1637,12 +1637,12 @@
 }
 
 .sample-pipeline__connector-icon {
-  display: block;
   width: 24px;
-  height: 16px;
+  height: 15.999992370605469px;
+  opacity: 1;
+  display: block;
   flex-shrink: 0;
   color: #b8bfda;
-  opacity: 1;
 }
 
 /* Above desktop: grow cards and gaps proportionally (143 : 115) */
