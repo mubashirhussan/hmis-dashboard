@@ -98,7 +98,7 @@ export function Navbar() {
                 </span>
                 <span
                   className={[
-                    "absolute right-0 left-[8px] bottom-[13px] h-[3px] rounded-full bg-[#005696] transition-opacity",
+                    "absolute right-0 left-[8px] bottom-[8px] h-[3px] rounded-full bg-[#005696] transition-opacity",
                     active ? "opacity-100" : "opacity-0 group-hover:opacity-40",
                   ].join(" ")}
                   aria-hidden

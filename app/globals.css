@@ -3,7 +3,7 @@
 :root {
   --background: #f3f7ff;
   --foreground: #171717;
-  --navbar-height: 119px;
+  --navbar-height: 80px;
   /* Figma artboard reference — layout is fluid above this width */
   --design-width: 1530px;
   --container-padding-x: 24px;
@@ -388,7 +388,7 @@
   display: block;
   font-family: var(--font-poppins-family), Poppins, sans-serif;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 100%;
   letter-spacing: 0.04em;
   color: #026bb1;
@@ -397,7 +397,7 @@
 .navbar-user-role {
   display: block;
   font-family: var(--font-poppins-family), Poppins, sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 12px;
   line-height: 100%;
   letter-spacing: 0.04em;
@@ -408,7 +408,7 @@
 .nav-label {
   font-family: var(--font-poppins-family), Poppins, sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 43px;
   letter-spacing: 0;
   text-align: center;
