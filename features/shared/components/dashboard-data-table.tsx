@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 export type DashboardTableColumn = {
   key: string;
   label: string;
+  className?: string;
   cellVariant?: "emphasis";
   cellType?: "tat" | "pending";
 };
@@ -27,6 +28,7 @@ function joinClasses(...classes: Array<string | false | undefined>) {
 function getHeaderCellClass(column: DashboardTableColumn) {
   return joinClasses(
     "overview-table__cell",
+    column.className,
     column.cellType === "tat" && "overview-table__cell--tat",
   );
 }
@@ -34,6 +36,7 @@ function getHeaderCellClass(column: DashboardTableColumn) {
 function getBodyCellClass(column: DashboardTableColumn, columnIndex: number) {
   return joinClasses(
     "overview-table__cell",
+    column.className,
     columnIndex === 0 && "overview-table__cell--name",
     columnIndex > 0 &&
       column.cellVariant === "emphasis" &&

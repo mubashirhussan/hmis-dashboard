@@ -9,7 +9,7 @@ import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
 
 const RIDER_TRACKING_COLUMNS: DashboardTableColumn[] = [
   { key: "riderName", label: "Rider Name" },
-  { key: "location", label: "Location" },
+  { key: "location", label: "Location", className: "overview-table__cell--left" },
   { key: "arrivalTime", label: "Arrival Time" },
   { key: "exitTime", label: "Exit Time" },
   { key: "quantity", label: "Quantity" },

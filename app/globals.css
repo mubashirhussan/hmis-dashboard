@@ -895,12 +895,17 @@
   text-align: center;
 }
 
-.overview-table__header > .overview-table__cell:first-child {
+.overview-table__header > .overview-table__cell:first-child,
+.overview-table__header > .overview-table__cell--left {
+  text-align: left;
+}
+
+.overview-table__row > .overview-table__cell--name,
+.overview-table__row > .overview-table__cell--left {
   text-align: left;
 }
 
 .overview-table__row > .overview-table__cell--name {
-  text-align: left;
   font-weight: 600;
   color: #000000;
 }

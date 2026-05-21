@@ -9,7 +9,7 @@ import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
 
 const CRITICAL_VALUES_COLUMNS: DashboardTableColumn[] = [
   { key: "order", label: "Order" },
-  { key: "patient", label: "Patient" },
+  { key: "patient", label: "Patient", className: "overview-table__cell--left" },
   { key: "test", label: "Test" },
   { key: "value", label: "Values" },
   { key: "status", label: "Status" },

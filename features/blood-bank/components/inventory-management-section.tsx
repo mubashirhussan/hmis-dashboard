@@ -9,7 +9,7 @@ import CollectionFillIcon from "@iconify-react/bi/collection-fill";
 
 const INVENTORY_COLUMNS: DashboardTableColumn[] = [
   { key: "requestId", label: "ID" },
-  { key: "patient", label: "Patient" },
+  { key: "patient", label: "Patient", className: "overview-table__cell--left" },
   { key: "units", label: "Units" },
   { key: "group", label: "Group" },
   { key: "time", label: "Time" },
