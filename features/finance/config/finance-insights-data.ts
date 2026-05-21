@@ -112,13 +112,13 @@ export const revenueDeptSegments: RevenueDeptSegment[] = [
     revenue: "655k",
     color: "#026bb1",
   },
-  {
-    id: "ct-mri",
-    label: "CT / MRI",
-    percent: 30,
-    revenue: "655k",
-    color: "#f9b115",
-  },
+  // {
+  //   id: "ct-mri",
+  //   label: "CT / MRI",
+  //   percent: 30,
+  //   revenue: "655k",
+  //   color: "#f9b115",
+  // },
   {
     id: "blood-bank",
     label: "Blood Bank",
@@ -148,6 +148,6 @@ export const paymentModeRows: PaymentModeRow[] = [
   { id: "cash", label: "Cash", percent: 92, value: "491k" },
   { id: "card", label: "Card", percent: 97, value: "734k" },
   { id: "panel", label: "Panel", percent: 70, value: "390k", tone: "panel" },
-  { id: "digital", label: "Digital", percent: 85, value: "690k" },
-  { id: "credit", label: "Credit", percent: 98, value: "1.2M" },
+  { id: "digital", label: "Wallet", percent: 85, value: "690k" },
+  // { id: "credit", label: "Credit", percent: 98, value: "1.2M" },
 ];

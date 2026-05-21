@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import HexagonOutlineIcon from "@iconify-react/mdi/hexagon-outline";
 import {
   revenueDeptSegments,
   type RevenueDeptSegment,
@@ -18,10 +17,12 @@ const RADIUS = 96;
 const HALF_CIRCUMFERENCE = Math.PI * RADIUS;
 
 function buildSemiArcs(segments: RevenueDeptSegment[]) {
+  const totalPercent =
+    segments.reduce((sum, segment) => sum + segment.percent, 0) || 100;
   let offset = 0;
 
   return segments.map((segment) => {
-    const length = (segment.percent / 100) * HALF_CIRCUMFERENCE;
+    const length = (segment.percent / totalPercent) * HALF_CIRCUMFERENCE;
     const arc = {
       ...segment,
       dashArray: `${length} ${HALF_CIRCUMFERENCE * 2}`,
@@ -37,12 +38,12 @@ export function RevenueByDeptSection() {
   const arcs = useMemo(() => buildSemiArcs(revenueDeptSegments), []);
   const activeSegment =
     revenueDeptSegments.find((segment) => segment.id === activeId) ??
-    revenueDeptSegments[2];
+    revenueDeptSegments[0];
 
   return (
     <DashboardPanel
       className="finance-panel finance-panel--dept"
-      title="Revenue by Dept"
+      title="Revenue By Dept"
       icon={
         <StopHexagonSolidIcon
           height="39"
