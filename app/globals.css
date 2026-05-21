@@ -2422,9 +2422,9 @@
   background: #026bb1;
 }
 
-.finance-panel--overview .dashboard-panel__title {
+/* .finance-panel--overview .dashboard-panel__title {
   text-transform: uppercase;
-}
+} */
 
 .finance-insights-grid {
   display: grid;

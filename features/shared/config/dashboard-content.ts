@@ -70,7 +70,7 @@ export const dashboardContentByModule: Record<string, DashboardPageContent> = {
   },
   laboratory: {
     title: "Laboratory Management",
-    subtitle: "Real Time overview of laboratory operations",
+    // subtitle: "Real Time overview of laboratory operations",
     metrics: withMetricIcons(
       [
         "lab-completed",
@@ -130,7 +130,7 @@ export const dashboardContentByModule: Record<string, DashboardPageContent> = {
   },
   imaging: {
     title: "Imaging & Radiology",
-    subtitle: "Real time overview of imaging operations",
+    // subtitle: "Real time overview of imaging operations",
     metrics: withMetricIcons(
       [
         "exams-user",
@@ -190,7 +190,7 @@ export const dashboardContentByModule: Record<string, DashboardPageContent> = {
   },
   "blood-bank": {
     title: "Blood Bank",
-    subtitle: "Inventory, cross-matching, donor management",
+    // subtitle: "Inventory, cross-matching, donor management",
     metrics: withMetricIcons(
       [
         "blood-stock",
@@ -243,7 +243,7 @@ export const dashboardContentByModule: Record<string, DashboardPageContent> = {
   },
   finance: {
     title: "Finance & Billing",
-    subtitle: "Real time overview of financial operations",
+    // subtitle: "Real time overview of financial operations",
     metrics: withMetricIcons(
       [
         "revenue-money",
@@ -289,7 +289,7 @@ export const dashboardContentByModule: Record<string, DashboardPageContent> = {
   },
   "home-services": {
     title: "Home Services",
-    subtitle: "Real time overview of home care operations",
+    // subtitle: "Real time overview of home care operations",
     metrics: withMetricIcons(
       [
         "home-visits-main",

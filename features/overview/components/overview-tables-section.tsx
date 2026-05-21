@@ -16,7 +16,7 @@ export function OverviewTablesSection() {
         rows={corporateClientsRows}
         pagination
         pageSize={6}
-        totalCount={100}
+        totalCount={16}
       />
       <OverviewDataTableCard
         title="Collection Centers"

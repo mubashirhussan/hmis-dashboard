@@ -80,7 +80,7 @@ export const bloodGroupInventoryItems: BloodGroupInventoryItem[] = [
 
 export const bloodGroupInventorySummary: BloodGroupInventorySummary = {
   totalUnits: 342,
-  sufficientGroups: 6,
+  sufficientGroups: 4,
   lowStockGroups: 2,
   criticalGroups: 1,
 };

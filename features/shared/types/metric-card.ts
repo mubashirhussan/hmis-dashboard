@@ -46,6 +46,6 @@ export type MetricCardData = {
 
 export type DashboardPageContent = {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   metrics: MetricCardData[];
 };
