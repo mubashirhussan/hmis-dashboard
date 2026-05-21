@@ -17,7 +17,7 @@ function withMetricIcons(
 export const dashboardContentByModule: Record<string, DashboardPageContent> = {
   overview: {
     title: "Dashboard",
-    subtitle: "Real time overview of diagnostic operations",
+    subtitle: "Real Time Overview of Diagnostic Operations",
     metrics: withMetricIcons(
       [
         "users-group",
@@ -70,7 +70,7 @@ export const dashboardContentByModule: Record<string, DashboardPageContent> = {
   },
   laboratory: {
     title: "Laboratory Management",
-    subtitle: "Real time overview of laboratory operations",
+    subtitle: "Real Time overview of laboratory operations",
     metrics: withMetricIcons(
       [
         "lab-completed",
