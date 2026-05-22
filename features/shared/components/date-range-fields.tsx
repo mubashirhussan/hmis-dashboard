@@ -2,27 +2,13 @@
 
 import { useRef, useState } from "react";
 
+import CalendarOutlineIcon from '@iconify-react/ion/calendar-outline';
+
 function getTodayIso() {
   return new Date().toISOString().slice(0, 10);
 }
 
-function CalendarIcon() {
-  return (
-    <svg
-      viewBox="0 0 20 20"
-      className="h-4 w-4 shrink-0 text-[#026bb1]"
-      fill="none"
-      aria-hidden
-    >
-      <path
-        d="M6 2v2M14 2v2M3 7h14M4 4h12a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Z"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
+
 
 function openDatePicker(input: HTMLInputElement | null) {
   if (!input) return;
@@ -73,7 +59,7 @@ function DateField({
         onClick={() => openDatePicker(inputRef.current)}
         aria-label={`Open calendar for ${label}`}
       >
-        <CalendarIcon />
+        <CalendarOutlineIcon className="text-[#026BB1] size-5.75" />
       </button>
     </div>
   );

@@ -23,7 +23,19 @@ importers:
       '@iconify-react/carbon':
         specifier: ^1.0.4
         version: 1.0.4(react@19.2.4)
+      '@iconify-react/fa-solid':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
+      '@iconify-react/flowbite':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
+      '@iconify-react/fluent-emoji-high-contrast':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
       '@iconify-react/fluent-mdl2':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
+      '@iconify-react/fontisto':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
       '@iconify-react/formkit':
@@ -32,10 +44,34 @@ importers:
       '@iconify-react/game-icons':
         specifier: ^1.0.3
         version: 1.0.3(react@19.2.4)
+      '@iconify-react/gravity-ui':
+        specifier: ^1.0.3
+        version: 1.0.3(react@19.2.4)
+      '@iconify-react/gridicons':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
+      '@iconify-react/healthicons':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
       '@iconify-react/hugeicons':
         specifier: ^1.0.7
         version: 1.0.7(react@19.2.4)
       '@iconify-react/icomoon-free':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
+      '@iconify-react/icon-park-solid':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
+      '@iconify-react/iconoir':
+        specifier: ^1.0.3
+        version: 1.0.3(react@19.2.4)
+      '@iconify-react/ion':
+        specifier: ^1.0.3
+        version: 1.0.3(react@19.2.4)
+      '@iconify-react/jam':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
+      '@iconify-react/lsicon':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
       '@iconify-react/mage':
@@ -62,13 +98,22 @@ importers:
       '@iconify-react/mynaui':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
+      '@iconify-react/qlementine-icons':
+        specifier: ^1.0.3
+        version: 1.0.3(react@19.2.4)
       '@iconify-react/ri':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
       '@iconify-react/si':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
+      '@iconify-react/solar':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
       '@iconify-react/streamline-freehand':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
+      '@iconify-react/streamline-plump':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
       '@reduxjs/toolkit':
@@ -273,8 +318,20 @@ packages:
   '@iconify-react/carbon@1.0.4':
     resolution: {integrity: sha512-SDFr9RV6sZXqjAeyNw/JL0aGRrOWtOetCk9q3/BXvRw0MZWSIinQnVpT3FHswTtv38wrJy/YXXI3FWUvC5fHnQ==}
 
+  '@iconify-react/fa-solid@1.0.2':
+    resolution: {integrity: sha512-n8g8tVMafqlZtzZReE+Z87wyVccLIH5sLmMV5Ju7IRvcfqcyvoTBZaWebV3BN9ERYbPV4XVT+EKcsYTE+aXSRg==}
+
+  '@iconify-react/flowbite@1.0.2':
+    resolution: {integrity: sha512-PNmJ2Zog8+V6zlJItYgv3JB8MzJMGFKJNMTjKphlNx9BNDVFvsaX2iQMLEA00eWn7hnVA45hIyvueHt4adlp1Q==}
+
+  '@iconify-react/fluent-emoji-high-contrast@1.0.2':
+    resolution: {integrity: sha512-C95jb7Nim0jLLWaxztqqpOgQ4bqMIR5MCIYjZwROg5rV2081qOs7u2xls8eCcMCey5h9v9zdBufQdwQBYWJO6Q==}
+
   '@iconify-react/fluent-mdl2@1.0.2':
     resolution: {integrity: sha512-X7zd2csLKeRGAnJJWQxyS/sxf8qCGBeoTJKybK7hM9MeVpFHp19qW0ox72bitnLd96Z+XcePeDLfp5F4vx3GdA==}
+
+  '@iconify-react/fontisto@1.0.2':
+    resolution: {integrity: sha512-OJQZT77IiHErt5/kVJcXqZ5EMZPp6XjrXUVN4Hsjo9HqDW3jzxceLtOJ+SBSlh+ryzdjcquyiypuZE9OPhP1cA==}
 
   '@iconify-react/formkit@1.0.2':
     resolution: {integrity: sha512-cZ5ao9c+jh+vii5W4rjdTqrDWKn4Oq8VczuMNbIwHCDkSVTKTRAHi2HvoXPDmBgWnFnzuIkkWWnhlrEi8JDGwA==}
@@ -282,11 +339,35 @@ packages:
   '@iconify-react/game-icons@1.0.3':
     resolution: {integrity: sha512-Xy5KKYawM2ViuylVtCiu2v6K6MUIlVS6o4WPrNTJDZyS3c5XJ7JJs++OoIFpxLA9LmIbZXCKbLgHr+maswoohg==}
 
+  '@iconify-react/gravity-ui@1.0.3':
+    resolution: {integrity: sha512-5XmPYvuKSCMUhrMNlv1EYfslUheIliLii7Q+Wm8e6tiyDWv3ExkusGQVbRnHqHd/UP9k/Qk1+zZxrxD2d9HU+Q==}
+
+  '@iconify-react/gridicons@1.0.2':
+    resolution: {integrity: sha512-8GuLC7q+bU2iV5p5N/kLRuJ9oNdp2ybZB2d0LiHZVi7yQNmhIL54nsI8eAm7kqQLMvY8ntxZ8U/K6UoW/CoyIg==}
+
+  '@iconify-react/healthicons@1.0.2':
+    resolution: {integrity: sha512-YYREQ9u+7KXNcrh1Nzi0/AXhkEpQ7/PBexCiE/UVCNrmUjBdQiYleUMIv39uRmcmbEpRCmQzLZYSe614dK41Aw==}
+
   '@iconify-react/hugeicons@1.0.7':
     resolution: {integrity: sha512-1lXI7ANZ9yxFKj8xJnGhyiUvtZeL+BxcHn4DG819EbLdoP57RP5yni9lq0+ZzPpvZWCFrOVCTHyw9ksTXBbbtg==}
 
   '@iconify-react/icomoon-free@1.0.2':
     resolution: {integrity: sha512-JXAu1Gp2RyWHK54r7SaT1zArqtFi8JQy7kJx8aS7GmFCuZr1+lD+BrjIT2Ajm1WsoczAENqCv5CxP2u0ppczbg==}
+
+  '@iconify-react/icon-park-solid@1.0.2':
+    resolution: {integrity: sha512-mrIhi+HCSK0R9N/MGAyyh6GKhypfu/hHPbow+N6MikJbwxU32I4Gxqp4hWEbi/38PNaoISCVazfJaA4wHKiTzg==}
+
+  '@iconify-react/iconoir@1.0.3':
+    resolution: {integrity: sha512-ThgajWjoTzAlW9Z9OYAJ3Yo3QrD7fz6Rr1Lfik/oOWgWQBD3Lgw0vZnkLn37Djxcbg9lnvdHNgzJyDEO54wSEQ==}
+
+  '@iconify-react/ion@1.0.3':
+    resolution: {integrity: sha512-5OsBNVHgAL3ygRdXToqcB2e9hTzOoho+3X3Bw4hGvMpt5X16TrJc7tBMmccR+WmumGdSJPhlSkGzb01RDcqVPg==}
+
+  '@iconify-react/jam@1.0.2':
+    resolution: {integrity: sha512-6WgUJ+Det4TneqhUtChgRUQ7geQCFffhVdJcY2QsjK6C4fbaLZ2mJyzg+g8+AffLuIYcA6ZT3x2+LbqFbS9wYg==}
+
+  '@iconify-react/lsicon@1.0.2':
+    resolution: {integrity: sha512-Mq0867A9WKeevc2coPxrSZLBZlr4VoMg9qkyDBQHyaK93qU8vefZpXr+LL8fBfXq4Cn9bWp4emj888idJUvbKw==}
 
   '@iconify-react/mage@1.0.2':
     resolution: {integrity: sha512-pPy4HYOIBw/jDbVopsx/xY5alF1piX1qW7KKNzkWyK1y2iqYnXxvBCqEIgrUqneP7cz5kX+EH44FnwgsoCafiw==}
@@ -312,14 +393,23 @@ packages:
   '@iconify-react/mynaui@1.0.2':
     resolution: {integrity: sha512-yDGEc/MAljI814UIOHTRRLYgojgqhLY5rZc09qiSQkIix62ZCfNDlClHVrqSDNUn+CjjEexNd2aMGTzOhalEZA==}
 
+  '@iconify-react/qlementine-icons@1.0.3':
+    resolution: {integrity: sha512-sxA+PyCLmOq331DbjLdBZeuRrH1Hsw9NpjnR4009DfalVqO1qXhoILLl+tx9w7gnTlwJXu+pJi96EIUOdFnhNw==}
+
   '@iconify-react/ri@1.0.2':
     resolution: {integrity: sha512-I8UugTKMp5AggweGbaQEUZhfncr0n34sBp5N1RNN6pQUWDVJNMyaBaFrvN+b/xZXAO2y2TOJdWOvb5i8POf91w==}
 
   '@iconify-react/si@1.0.2':
     resolution: {integrity: sha512-MEX3LDlCKKGYvfajRME0dz02xCwuDN3RxmIuoqT0rWtDNeF0HNgj3mtVZzV/o4VdqVW+OXXbB6rj/W7n5bcUPw==}
 
+  '@iconify-react/solar@1.0.2':
+    resolution: {integrity: sha512-5D7+IRlnN35GRfZj8F7X/XJXjIg3MBcJvqlRCBhkEQOFQxIjsF8inNa5rSnvxOi4BboQDtaRfqrJDNKCvkYBtw==}
+
   '@iconify-react/streamline-freehand@1.0.2':
     resolution: {integrity: sha512-YPAD2FGCqZqGd77a/U2mhTtNgF1dvVQIaA1xSMuWPk23eIuAenSB7zGD2yC6lmhpIm7Il/zfCvHdGO+Cy2SEzQ==}
+
+  '@iconify-react/streamline-plump@1.0.2':
+    resolution: {integrity: sha512-cSbsGeG/PcBH/xXBU2XJa+hNVjsXrZLgH8BJ5unO3OtolPNMmiaUMWD1XFSuiGzfRDUrrDLSiDKqWJA72/SMjQ==}
 
   '@iconify/css-react@1.0.2':
     resolution: {integrity: sha512-k33FKG4jGgd8odos+1HdSwCKZOQ5F1heQxwl/zDrA53tLg5IseDPMqsmQbcCEZ6E0Zgcrmfo4ceFSBmbuEvGtw==}
@@ -2373,7 +2463,31 @@ snapshots:
     transitivePeerDependencies:
       - react
 
+  '@iconify-react/fa-solid@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/flowbite@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/fluent-emoji-high-contrast@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
   '@iconify-react/fluent-mdl2@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/fontisto@1.0.2(react@19.2.4)':
     dependencies:
       '@iconify/css-react': 1.0.2(react@19.2.4)
     transitivePeerDependencies:
@@ -2391,6 +2505,24 @@ snapshots:
     transitivePeerDependencies:
       - react
 
+  '@iconify-react/gravity-ui@1.0.3(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/gridicons@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/healthicons@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
   '@iconify-react/hugeicons@1.0.7(react@19.2.4)':
     dependencies:
       '@iconify/css-react': 1.0.2(react@19.2.4)
@@ -2398,6 +2530,36 @@ snapshots:
       - react
 
   '@iconify-react/icomoon-free@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/icon-park-solid@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/iconoir@1.0.3(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/ion@1.0.3(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/jam@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/lsicon@1.0.2(react@19.2.4)':
     dependencies:
       '@iconify/css-react': 1.0.2(react@19.2.4)
     transitivePeerDependencies:
@@ -2451,6 +2613,12 @@ snapshots:
     transitivePeerDependencies:
       - react
 
+  '@iconify-react/qlementine-icons@1.0.3(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
   '@iconify-react/ri@1.0.2(react@19.2.4)':
     dependencies:
       '@iconify/css-react': 1.0.2(react@19.2.4)
@@ -2463,7 +2631,19 @@ snapshots:
     transitivePeerDependencies:
       - react
 
+  '@iconify-react/solar@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
   '@iconify-react/streamline-freehand@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/streamline-plump@1.0.2(react@19.2.4)':
     dependencies:
       '@iconify/css-react': 1.0.2(react@19.2.4)
     transitivePeerDependencies:
