@@ -1,9 +1,9 @@
-import CalendarEventIcon from "@iconify-react/bi/calendar-event";
-import RadiationIcon from "@iconify-react/mdi/radiation";
+
 import TimerIcon from "@iconify-react/material-symbols-light/timer";
 import { upcomingVisits } from "@/features/home-services/config/home-services-insights-data";
 import { DashboardPanel } from "@/features/shared/components/dashboard-panel";
 import EventsIcon from '@iconify-react/mdi/events';
+              import RadiationAltIcon from '@iconify-react/fa-solid/radiation-alt';
 
 export function UpcomingVisitsSection() {
   return (
@@ -24,7 +24,8 @@ export function UpcomingVisitsSection() {
             className={`hs-visit-card hs-visit-card--${visit.tone}`}
           >
             <div className="hs-visit-card__icon-wrap" aria-hidden>
-              <RadiationIcon className="hs-visit-card__icon" height="22" width="22" />
+              <RadiationAltIcon className="hs-visit-card__icon" height="22" width="22" />
+
             </div>
 
             <div className="hs-visit-card__body">

@@ -1,7 +1,9 @@
-import AlertIcon from "@iconify-react/mdi/alert";
-import AlertDecagramIcon from "@iconify-react/mdi/alert-decagram";
-import PackageVariantIcon from "@iconify-react/mdi/package-variant";
+
 import ShieldCheckIcon from "@iconify-react/mdi/shield-check";
+import PackageFilledIcon from '@iconify-react/boxicons/package-filled';
+import WarningOutlineIcon from '@iconify-react/ion/warning-outline';
+import AlertOutlinedIcon from '@iconify-react/ant-design/alert-outlined';
+
 import type { BloodGroupInventorySummary } from "@/features/blood-bank/config/blood-group-inventory-data";
 
 type BloodGroupInventorySummaryProps = {
@@ -12,7 +14,7 @@ const summaryItems = [
   {
     key: "total",
     title: "Total Units",
-    icon: PackageVariantIcon,
+    icon: PackageFilledIcon,
     tone: "blue",
     getValue: (s: BloodGroupInventorySummary) => s.totalUnits,
     getLabel: () => "All Blood Groups",
@@ -28,7 +30,7 @@ const summaryItems = [
   {
     key: "low",
     title: "Low Stock",
-    icon: AlertIcon,
+    icon: WarningOutlineIcon,
     tone: "orange",
     getValue: (s: BloodGroupInventorySummary) => s.lowStockGroups,
     getLabel: () => "Groups",
@@ -36,7 +38,7 @@ const summaryItems = [
   {
     key: "critical",
     title: "Critical",
-    icon: AlertDecagramIcon,
+    icon: AlertOutlinedIcon,
     tone: "red",
     getValue: (s: BloodGroupInventorySummary) => s.criticalGroups,
     getLabel: () => "Group",

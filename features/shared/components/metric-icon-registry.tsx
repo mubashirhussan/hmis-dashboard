@@ -1,35 +1,44 @@
-import CalendarEventIcon from "@iconify-react/bi/calendar-event";
+
 import Flower3Icon from "@iconify-react/bi/flower3";
-import HouseIcon from "@iconify-react/bi/house";
+
 import LabIcon from "@iconify-react/icomoon-free/lab";
 import UsersFillIcon from "@iconify-react/mage/users-fill";
 import BloodBankIcon from "@iconify-react/maki/blood-bank";
 import FinanceModeRoundedIcon from "@iconify-react/material-symbols/finance-mode-rounded";
-import PercentOutlineIcon from "@iconify-react/mdi/percent-outline";
-import UndoVariantIcon from "@iconify-react/mdi/undo-variant";
+
 import CheckCircleOutlineRoundedIcon from "@iconify-react/material-symbols-light/check-circle-outline-rounded";
-import DescriptionIcon from "@iconify-react/material-symbols-light/description";
-import HomeHealthIcon from "@iconify-react/material-symbols-light/home-health";
-import PendingActionsIcon from "@iconify-react/material-symbols-light/pending-actions";
+
 import TimerIcon from "@iconify-react/material-symbols-light/timer";
-import AlertCircleIcon from "@iconify-react/mdi/alert-circle";
+
 import CircleDoubleIcon from "@iconify-react/mdi/circle-double";
-import ClipboardClockIcon from "@iconify-react/mdi/clipboard-clock-outline";
-import FileDocumentMultipleIcon from "@iconify-react/mdi/file-document-multiple-outline";
+
 import HandCoinIcon from "@iconify-react/mdi/hand-coin-outline";
-import HospitalBuildingIcon from "@iconify-react/mdi/hospital-building";
-import HourglassIcon from "@iconify-react/mdi/hourglass-empty";
-import MicroscopeIcon from "@iconify-react/mdi/microscope";
-import MonitorIcon from "@iconify-react/mdi/monitor";
-import PackageVariantIcon from "@iconify-react/mdi/package-variant";
-import RadiationIcon from "@iconify-react/mdi/radiation";
-import StarIcon from "@iconify-react/mdi/star";
-import StarFourPointsIcon from "@iconify-react/mdi/star-four-points-outline";
-import SyncIcon from "@iconify-react/mdi/sync";
-import TestTubeIcon from "@iconify-react/mdi/test-tube";
-import WaterIcon from "@iconify-react/mdi/water";
+
 import type { ComponentType } from "react";
 import type { MetricCardIcon } from "@/features/shared/types/metric-card";
+
+
+import TestTubeHeldIcon from '@iconify-react/game-icons/test-tube-held';
+import Home1SolidIcon from '@iconify-react/streamline-plump/home-1-solid';
+import WorkOrderAppointmentOutlineIcon from '@iconify-react/lsicon/work-order-appointment-outline';
+import FileDocumentBoxMultipleIcon from '@iconify-react/mdi/file-document-box-multiple';
+import TimerOutlineRoundedIcon from '@iconify-react/material-symbols/timer-outline-rounded';
+import AbnormalIcon from '@iconify-react/icon-park-solid/abnormal';
+import RepeatIcon from '@iconify-react/jam/repeat';
+  import BoxOutlineIcon from '@iconify-react/solar/box-outline';
+  import PersonSpeakerIcon from '@iconify-react/gravity-ui/person-speaker';
+  import Computer16Icon from '@iconify-react/qlementine-icons/computer-16';
+  import CalendarLinearIcon from '@iconify-react/solar/calendar-linear';
+  import IbmMatch360Icon from '@iconify-react/carbon/ibm-match-360';
+  import MoneyBagIcon from '@iconify-react/healthicons/money-bag';
+  import DiscountLightIcon from '@iconify-react/iconamoon/discount-light';
+  import BuildingOutlineIcon from '@iconify-react/flowbite/building-outline';
+  import TimerSandIcon from '@iconify-react/mdi/timer-sand';
+  import RefundIcon from '@iconify-react/gridicons/refund';
+    import MicroscopeSolidIcon from '@iconify-react/flowbite/microscope-solid';
+    import RadiationAltIcon from '@iconify-react/fa-solid/radiation-alt';
+    import RatingStarWinnerIcon from '@iconify-react/streamline-ultimate-color/rating-star-winner';
+
 
 export const METRIC_ICON_COLOR = "#026bb1";
 
@@ -37,40 +46,40 @@ type IconifyComponent = ComponentType<Record<string, unknown>>;
 
 export const metricIconifyRegistry: Record<MetricCardIcon, IconifyComponent> = {
   "users-group": UsersFillIcon,
-  "lab-flask": LabIcon,
-  "compliance-docs": FileDocumentMultipleIcon,
-  "pending-orders": PendingActionsIcon,
-  "home-visits": HomeHealthIcon,
-  "lab-completed": LabIcon,
-  "avg-tat-stopwatch": TimerIcon,
-  "critical-info": AlertCircleIcon,
-  "repeat-rate": SyncIcon,
-  "rejected-tests": ClipboardClockIcon,
-  "home-samples": PackageVariantIcon,
-  "exams-user": UsersFillIcon,
-  "pacs-monitor": MonitorIcon,
-  "reports-pending": DescriptionIcon,
+  "lab-flask": TestTubeHeldIcon,
+  "compliance-docs": FileDocumentBoxMultipleIcon,
+  "pending-orders": WorkOrderAppointmentOutlineIcon,
+  "home-visits": Home1SolidIcon,
+  "lab-completed": TestTubeHeldIcon,
+  "avg-tat-stopwatch": TimerOutlineRoundedIcon,
+  "critical-info": AbnormalIcon,
+  "repeat-rate": RepeatIcon,
+  "rejected-tests": WorkOrderAppointmentOutlineIcon,
+  "home-samples": BoxOutlineIcon,
+  "exams-user": PersonSpeakerIcon,
+  "pacs-monitor": Computer16Icon,
+  "reports-pending": FileDocumentBoxMultipleIcon,
   "report-tat": TimerIcon,
-  "ct-scan": CalendarEventIcon,
-  "mri-scan": RadiationIcon,
-  "home-imaging": HouseIcon,
-  "blood-stock": BloodBankIcon,
-  "cross-match": StarFourPointsIcon,
+  "ct-scan": CalendarLinearIcon,
+  "mri-scan": CalendarLinearIcon,
+  "home-imaging": Home1SolidIcon,
+  "blood-stock": TestTubeHeldIcon,
+  "cross-match": IbmMatch360Icon,
   "blood-donation": HandCoinIcon,
-  "blood-issued": ClipboardClockIcon,
-  "blood-screening": WaterIcon,
-  "blood-nat": TestTubeIcon,
-  "revenue-money": FinanceModeRoundedIcon,
-  "finance-discount": PercentOutlineIcon,
-  "finance-panel": HospitalBuildingIcon,
-  "collection-hourglass": HourglassIcon,
-  "refunds-undo": UndoVariantIcon,
-  "home-visits-main": HouseIcon,
-  "home-lab": LabIcon,
-  ultrasound: MicroscopeIcon,
-  xray: RadiationIcon,
+  "blood-issued": AbnormalIcon,
+  "blood-screening": Home1SolidIcon,
+  "blood-nat": Home1SolidIcon,
+  "revenue-money": MoneyBagIcon,
+  "finance-discount": DiscountLightIcon,
+  "finance-panel": BuildingOutlineIcon,
+  "collection-hourglass": TimerSandIcon,
+  "refunds-undo": RefundIcon,
+  "home-visits-main": Home1SolidIcon,
+  "home-lab": TestTubeHeldIcon,
+  ultrasound: MicroscopeSolidIcon,
+  xray: RadiationAltIcon,
   "avg-response": TimerIcon,
-  "rating-stars": StarIcon,
+  "rating-stars": RatingStarWinnerIcon,
 };
 
 export const navIconifyByModule = {
