@@ -116,6 +116,9 @@ importers:
       '@iconify-react/streamline-plump':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
+      '@iconify-react/streamline-ultimate-color':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
       '@reduxjs/toolkit':
         specifier: ^2.11.2
         version: 2.11.2(react-redux@9.2.0(@types/react@19.2.14)(react@19.2.4)(redux@5.0.1))(react@19.2.4)
@@ -410,6 +413,9 @@ packages:
 
   '@iconify-react/streamline-plump@1.0.2':
     resolution: {integrity: sha512-cSbsGeG/PcBH/xXBU2XJa+hNVjsXrZLgH8BJ5unO3OtolPNMmiaUMWD1XFSuiGzfRDUrrDLSiDKqWJA72/SMjQ==}
+
+  '@iconify-react/streamline-ultimate-color@1.0.2':
+    resolution: {integrity: sha512-WcBpZSQkL8xlnBSr0w0LGcvbpI4FVzrC873P2UReSXCPF6UR56SbqlKrS6j/jQOEH6mBH51dL9SZ2+2igjfqDw==}
 
   '@iconify/css-react@1.0.2':
     resolution: {integrity: sha512-k33FKG4jGgd8odos+1HdSwCKZOQ5F1heQxwl/zDrA53tLg5IseDPMqsmQbcCEZ6E0Zgcrmfo4ceFSBmbuEvGtw==}
@@ -2644,6 +2650,12 @@ snapshots:
       - react
 
   '@iconify-react/streamline-plump@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/streamline-ultimate-color@1.0.2(react@19.2.4)':
     dependencies:
       '@iconify/css-react': 1.0.2(react@19.2.4)
     transitivePeerDependencies:
