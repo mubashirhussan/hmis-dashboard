@@ -1,33 +1,19 @@
-import CalendarEventIcon from "@iconify-react/bi/calendar-event";
+
 import Flower3Icon from "@iconify-react/bi/flower3";
-import HouseIcon from "@iconify-react/bi/house";
+
 import LabIcon from "@iconify-react/icomoon-free/lab";
 import UsersFillIcon from "@iconify-react/mage/users-fill";
 import BloodBankIcon from "@iconify-react/maki/blood-bank";
 import FinanceModeRoundedIcon from "@iconify-react/material-symbols/finance-mode-rounded";
-import PercentOutlineIcon from "@iconify-react/mdi/percent-outline";
-import UndoVariantIcon from "@iconify-react/mdi/undo-variant";
+
 import CheckCircleOutlineRoundedIcon from "@iconify-react/material-symbols-light/check-circle-outline-rounded";
-import DescriptionIcon from "@iconify-react/material-symbols-light/description";
-import HomeHealthIcon from "@iconify-react/material-symbols-light/home-health";
-import PendingActionsIcon from "@iconify-react/material-symbols-light/pending-actions";
+
 import TimerIcon from "@iconify-react/material-symbols-light/timer";
-import AlertCircleIcon from "@iconify-react/mdi/alert-circle";
+
 import CircleDoubleIcon from "@iconify-react/mdi/circle-double";
-import ClipboardClockIcon from "@iconify-react/mdi/clipboard-clock-outline";
-import FileDocumentMultipleIcon from "@iconify-react/mdi/file-document-multiple-outline";
+
 import HandCoinIcon from "@iconify-react/mdi/hand-coin-outline";
-import HospitalBuildingIcon from "@iconify-react/mdi/hospital-building";
-import HourglassIcon from "@iconify-react/mdi/hourglass-empty";
-import MicroscopeIcon from "@iconify-react/mdi/microscope";
-import MonitorIcon from "@iconify-react/mdi/monitor";
-import PackageVariantIcon from "@iconify-react/mdi/package-variant";
-import RadiationIcon from "@iconify-react/mdi/radiation";
-import StarIcon from "@iconify-react/mdi/star";
-import StarFourPointsIcon from "@iconify-react/mdi/star-four-points-outline";
-import SyncIcon from "@iconify-react/mdi/sync";
-import TestTubeIcon from "@iconify-react/mdi/test-tube";
-import WaterIcon from "@iconify-react/mdi/water";
+
 import type { ComponentType } from "react";
 import type { MetricCardIcon } from "@/features/shared/types/metric-card";
 
