@@ -4,6 +4,7 @@ import AlertDecagramIcon from "@iconify-react/mdi/alert-decagram";
 import { Droplet } from "lucide-react";
 import type { BloodGroupInventoryItem } from "@/features/blood-bank/config/blood-group-inventory-data";
 import { bloodGroupStatusLabels } from "@/features/blood-bank/config/blood-group-inventory-data";
+          import DropIcon from '@iconify-react/mdi/drop';
 
 type BloodGroupInventoryCardProps = {
   item: BloodGroupInventoryItem;
@@ -36,7 +37,8 @@ export function BloodGroupInventoryCard({ item }: BloodGroupInventoryCardProps) 
     >
       <div className="workload-dept-card__icon-wrap" aria-hidden>
         <span className="workload-dept-card__icon-inner">
-          <Droplet className="workload-dept-card__icon-svg" strokeWidth={2} aria-hidden />
+          <DropIcon className="workload-dept-card__icon-svg" strokeWidth={2} aria-hidden />
+
         </span>
       </div>
 

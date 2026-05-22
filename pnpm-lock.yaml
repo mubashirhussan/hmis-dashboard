@@ -17,6 +17,9 @@ importers:
       '@iconify-react/bi':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
+      '@iconify-react/boxicons':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
       '@iconify-react/bxs':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
@@ -314,6 +317,9 @@ packages:
 
   '@iconify-react/bi@1.0.2':
     resolution: {integrity: sha512-YWtpk80n/esPA7UA8BlRkKIpzUn6UCens0hgSY9biSI6Np0bqf7+65SpP14UeVQl2bO/Dbq2G9lhvdC8mBZ5GA==}
+
+  '@iconify-react/boxicons@1.0.2':
+    resolution: {integrity: sha512-TeqlqtYqVpYVqqHTzUx6TNG4Od6q94vklKwCx/5CWvP5ZG+e7Nn5FCcw3AQnk+UUSB2wzAXtiwYYNfwuQl3EmQ==}
 
   '@iconify-react/bxs@1.0.2':
     resolution: {integrity: sha512-L/VNWTawgkdLAqQHTxf4DdrkvHLQTlqrWkB6WqiadkJmPM0cngEevtS3wzvbdQq9NR9jOfI85e37Ol8fH/LQhQ==}
@@ -2452,6 +2458,12 @@ snapshots:
       - react
 
   '@iconify-react/bi@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/boxicons@1.0.2(react@19.2.4)':
     dependencies:
       '@iconify/css-react': 1.0.2(react@19.2.4)
     transitivePeerDependencies:
