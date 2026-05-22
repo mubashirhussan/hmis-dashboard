@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@iconify-icons/iconamoon':
+        specifier: ^1.2.0
+        version: 1.2.0
       '@iconify-react/ant-design':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
@@ -65,6 +68,9 @@ importers:
       '@iconify-react/icon-park-solid':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
+      '@iconify-react/iconamoon':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
       '@iconify-react/iconoir':
         specifier: ^1.0.3
         version: 1.0.3(react@19.2.4)
@@ -72,6 +78,9 @@ importers:
         specifier: ^1.0.3
         version: 1.0.3(react@19.2.4)
       '@iconify-react/jam':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.4)
+      '@iconify-react/lets-icons':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
       '@iconify-react/lsicon':
@@ -309,6 +318,9 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
+  '@iconify-icons/iconamoon@1.2.0':
+    resolution: {integrity: sha512-ec3+5dqTP+fnavsYVTuU0ldlSKGaoaFPrDpm02y02hYntjGm4bRzRlO7Ffb+hmW9Q4qvXIVFzMjIoRiBHBgQ7w==}
+
   '@iconify-react/ant-design@1.0.2':
     resolution: {integrity: sha512-9zEoM+TaBBhaWff9JXzYzMX2ZClkxjZ/hcsZJDKnmxX2/KB8KI3HT9d1yTux8Jnhhxxs6TVLuu+BU4Fh0byA6w==}
 
@@ -366,6 +378,9 @@ packages:
   '@iconify-react/icon-park-solid@1.0.2':
     resolution: {integrity: sha512-mrIhi+HCSK0R9N/MGAyyh6GKhypfu/hHPbow+N6MikJbwxU32I4Gxqp4hWEbi/38PNaoISCVazfJaA4wHKiTzg==}
 
+  '@iconify-react/iconamoon@1.0.2':
+    resolution: {integrity: sha512-sCiHm9UFGU/8KaCGRKccd167b0Z/DR7Ort7TFB2MElt3+Eh8SX2OboDNCyoP6DYBbtXDJ2AQCBYEoJp9sEA0lg==}
+
   '@iconify-react/iconoir@1.0.3':
     resolution: {integrity: sha512-ThgajWjoTzAlW9Z9OYAJ3Yo3QrD7fz6Rr1Lfik/oOWgWQBD3Lgw0vZnkLn37Djxcbg9lnvdHNgzJyDEO54wSEQ==}
 
@@ -374,6 +389,9 @@ packages:
 
   '@iconify-react/jam@1.0.2':
     resolution: {integrity: sha512-6WgUJ+Det4TneqhUtChgRUQ7geQCFffhVdJcY2QsjK6C4fbaLZ2mJyzg+g8+AffLuIYcA6ZT3x2+LbqFbS9wYg==}
+
+  '@iconify-react/lets-icons@1.0.2':
+    resolution: {integrity: sha512-+5P345W1DN9QsFYjEBGR12VmhSfiG3+2NcnorI+pNRuiIpY9NBuC47zyEAVL8W0Tj95VsgzgXV5CrOwCGn2+vg==}
 
   '@iconify-react/lsicon@1.0.2':
     resolution: {integrity: sha512-Mq0867A9WKeevc2coPxrSZLBZlr4VoMg9qkyDBQHyaK93qU8vefZpXr+LL8fBfXq4Cn9bWp4emj888idJUvbKw==}
@@ -2445,6 +2463,10 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
+  '@iconify-icons/iconamoon@1.2.0':
+    dependencies:
+      '@iconify/types': 2.0.0
+
   '@iconify-react/ant-design@1.0.2(react@19.2.4)':
     dependencies:
       '@iconify/css-react': 1.0.2(react@19.2.4)
@@ -2559,6 +2581,12 @@ snapshots:
     transitivePeerDependencies:
       - react
 
+  '@iconify-react/iconamoon@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
   '@iconify-react/iconoir@1.0.3(react@19.2.4)':
     dependencies:
       '@iconify/css-react': 1.0.2(react@19.2.4)
@@ -2572,6 +2600,12 @@ snapshots:
       - react
 
   '@iconify-react/jam@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/lets-icons@1.0.2(react@19.2.4)':
     dependencies:
       '@iconify/css-react': 1.0.2(react@19.2.4)
     transitivePeerDependencies:

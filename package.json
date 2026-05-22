@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@iconify-icons/iconamoon": "^1.2.0",
     "@iconify-react/ant-design": "^1.0.2",
     "@iconify-react/arcticons": "^1.0.6",
     "@iconify-react/bi": "^1.0.2",
@@ -28,9 +29,11 @@
     "@iconify-react/hugeicons": "^1.0.7",
     "@iconify-react/icomoon-free": "^1.0.2",
     "@iconify-react/icon-park-solid": "^1.0.2",
+    "@iconify-react/iconamoon": "^1.0.2",
     "@iconify-react/iconoir": "^1.0.3",
     "@iconify-react/ion": "^1.0.3",
     "@iconify-react/jam": "^1.0.2",
+    "@iconify-react/lets-icons": "^1.0.2",
     "@iconify-react/lsicon": "^1.0.2",
     "@iconify-react/mage": "^1.0.2",
     "@iconify-react/maki": "^1.0.2",
